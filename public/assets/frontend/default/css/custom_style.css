@@ -6841,6 +6841,7 @@ span[class*="fi-rr-"]:before {
 .footer-content img,
 .logo-image img {
     width: auto !important;
+    border-radius: unset !important;
 }
 
 .blog-post1-link .banner img {

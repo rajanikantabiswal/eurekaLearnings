@@ -284,6 +284,7 @@ img {
 .logo-image img {
     height: 40px;
     object-fit: cover;
+    border-radius: unset !important;
 }
 .nav-menu {
     display: flex;

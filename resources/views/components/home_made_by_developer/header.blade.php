@@ -14,7 +14,7 @@
             <div class="col-auto">
                 <div class="logo-image">
                     <a href="{{ route('home') }}">
-                        <img src="{{ get_image(get_frontend_settings('dark_logo')) }}" alt="system logo" class="object-fit-cover  header-dark-logo">
+                        <img src="{{ get_image(get_frontend_settings('dark_logo')) }}" alt="system logo"  class="object-fit-cover  header-dark-logo">
                         <img src="{{ get_image(get_frontend_settings('light_logo')) }}" alt="system logo" class="object-fit-cover  header-light-logo d-none">
                     </a>
                 </div>
