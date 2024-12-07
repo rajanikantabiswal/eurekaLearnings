@@ -86,7 +86,7 @@
             --text-color: #6b7385;
             --color-white: #fff;
             --color-1: #ec2426;
-            --color-2: #192335;
+            --color-2: #000000;
             --color-black: #000;
             --box-shadow: rgba(100, 100, 111, 0.2) 12px 11px 34px 11px;
             --box-shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

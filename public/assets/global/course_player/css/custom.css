@@ -95,7 +95,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 25.36px;
-    color: #192335;
+    color: #000000;
 }
 
 .add-question a {
@@ -147,7 +147,7 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 22.5px;
-    color: #192335;
+    color: #000000;
     padding: 10.5px 0 10.5px 12px;
 }
 
@@ -236,7 +236,7 @@
 }
 
 .group-menu li:hover a {
-    color: #192335;
+    color: #000000;
 }
 
 .group-menu li a path {
@@ -244,7 +244,7 @@
 }
 
 .group-menu li:hover a path {
-    fill: #192335;
+    fill: #000000;
 }
 
 .three-dot {

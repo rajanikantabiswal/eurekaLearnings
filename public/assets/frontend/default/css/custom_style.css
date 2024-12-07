@@ -874,7 +874,7 @@ span[class="fi-rr-"]:before {
     padding-right: 26px;
     padding-left: 0;
     background: transparent;
-    color: #192335;
+    color: #000000;
     font-family: 'Poppins';
     font-size: 15px;
     font-style: normal;
@@ -1018,7 +1018,7 @@ span[class="fi-rr-"]:before {
 /* Footer Area Css End ***
 ************************/
 .footer-section {
-    background: linear-gradient(180deg, #1e3764 0%, #192335 100%);
+    background: linear-gradient(180deg, #1e3764 0%, #000000 100%);
 }
 
 .footer-main-wrap {
