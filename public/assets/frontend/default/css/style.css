@@ -18,7 +18,7 @@ Default Css
     --bg-white: #fff;
     --text-color: #6b7385;
     --color-white: #fff;
-    --color-1: #2f57ef;
+    --color-1: #ec2426;
     --color-2: #192335;
     --color-black: #000;
     --box-shadow: rgba(100, 100, 111, 0.2) 12px 11px 34px 11px;
@@ -222,7 +222,7 @@ img {
 .gradient {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -392,7 +392,7 @@ img {
     border: none;
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -799,7 +799,7 @@ img {
 .pr-wrap {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -1442,7 +1442,7 @@ img {
 .user-slider .owl-nav .owl-next {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     ) !important;
@@ -1751,7 +1751,7 @@ img {
 .entry-pagination .pagination li.active a {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     ) !important;
@@ -2175,7 +2175,7 @@ html .ui-button.ui-state-disabled:active {
 .btn-wrap .learn-btn {
     color: var(--color-2);
     font-family: "Euclid Circular A";
-    border: 1px solid #2f57ef38;
+    border: 1px solid #ec242638;
 }
 .right-profile .g-title {
     font-size: 32px;
@@ -2356,7 +2356,7 @@ html .ui-button.ui-state-disabled:active {
 .single-motion:hover {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -2534,7 +2534,7 @@ html .ui-button.ui-state-disabled:active {
 .gradient-border {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -2613,12 +2613,12 @@ html .ui-button.ui-state-disabled:active {
     color: var(--color-2) !important;
     transition: 0.5s;
     color: var(--color-2);
-    border: 1px solid #2f57ef38;
+    border: 1px solid #ec242638;
 }
 .c-card:hover .eBtn {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -2731,7 +2731,7 @@ html .ui-button.ui-state-disabled:active {
 .mybtn-play:hover {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -2745,7 +2745,7 @@ html .ui-button.ui-state-disabled:active {
     color: var(--color-white);
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -3267,7 +3267,7 @@ html .ui-button.ui-state-disabled:active {
 .ps-sidebar .learn-btn:hover {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -3319,7 +3319,7 @@ html .ui-button.ui-state-disabled:active {
 .ps-sidebar .f-socials li a:hover {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -3331,7 +3331,7 @@ html .ui-button.ui-state-disabled:active {
     border-color: transparent;
 }
 .dt_group a {
-    background: #2f57ef33;
+    background: #ec242633;
     padding: 11px 50px;
     border-radius: 41px;
     font-size: 14px;
@@ -3738,7 +3738,7 @@ html .ui-button.ui-state-disabled:active {
 .gradient-border2 {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -3750,7 +3750,7 @@ html .ui-button.ui-state-disabled:active {
 .gradient-border-btn:hover {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );
@@ -3897,7 +3897,7 @@ textarea::placeholder {
 }
 
 .category.active a {
-    color: #2f57ef;
+    color: #ec2426;
 }
 
 /******** Cart list style start
@@ -4412,7 +4412,7 @@ textarea::placeholder {
     border-bottom: 0;
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
+        #ec2426 0%,
         #c664ff 51%,
         #c664ff 100%
     );

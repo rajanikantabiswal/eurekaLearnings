@@ -1057,12 +1057,12 @@ span[class="fi-rr-"]:before {
 }
 
 .footer-social-list li a:hover {
-    border-color: #2F57EF;
+    border-color: #ec2426;
 }
 
 .contact-us-btn1 {
     border-radius: 10px;
-    border: 1px solid #2F57EF;
+    border: 1px solid #ec2426;
     padding: 12px 30px;
     display: flex;
     align-items: center;
@@ -1175,7 +1175,7 @@ span[class="fi-rr-"]:before {
     color: #dedede;
     border-radius: 10px 0 0 10px;
     background: transparent;
-    border: 1px solid #2f57ef;
+    border: 1px solid #ec2426;
     border-right: none;
 }
 
@@ -1188,12 +1188,12 @@ span[class="fi-rr-"]:before {
 
 .footer-search-group .form-control:focus {
     color: #dedede;
-    border-color: #2f57ef;
+    border-color: #ec2426;
 }
 
 .footer-search-group .submit {
     border-radius: 0 10px 10px 0;
-    background: linear-gradient(155deg, #2f57ef 0%, #c464fd 93.75%);
+    background: linear-gradient(155deg, #ec2426 0%, #c464fd 93.75%);
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 13px;
@@ -6965,7 +6965,7 @@ span[class*="fi-rr-"]:before {
 .primary-menu .have-mega-menu .menu-parent-a.active::after,
 .primary-menu .have-mega-menu .menu-parent-a:hover::after {
     vertical-align: middle;
-    border: 6px solid #2f57ef;
+    border: 6px solid #ec2426;
     border-right: 6px solid transparent;
     border-bottom: 0;
     border-left: 6px solid transparent;
