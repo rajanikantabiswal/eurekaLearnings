@@ -120,7 +120,7 @@
     position: absolute;
     top: -14px;
     right: -8px;
-    background-color: #d336e7;
+    background-color: #e73636;
     color: white;
     border-radius: 50px;
     padding: 0px;
@@ -7050,7 +7050,7 @@ span[class*="fi-rr-"]:before {
 }
 
 .bg-pink {
-    background-color: #d336e7 !important;
+    background-color: #e73636 !important;
 }
 
 .main-search-item {
