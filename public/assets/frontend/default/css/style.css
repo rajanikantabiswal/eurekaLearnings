@@ -3684,7 +3684,7 @@ html .ui-button.ui-state-disabled:active {
 ***************************************************************/
 .footer-area {
     margin-top: 110px;
-    background: linear-gradient(180deg, #1E3764 0%, #000000 100%);
+    background: linear-gradient(180deg, #a40e10 0%, #000000 100%);
     padding: 50px 0 30px 0;
     color: var(--color-white);
 }
@@ -3732,7 +3732,7 @@ html .ui-button.ui-state-disabled:active {
     position: relative;
     border-radius: 10px;
     transition: 0.5s;
-    background: #1e3764;
+    background: #a40e10;
     width: 208px;
 }
 .gradient-border2 {
