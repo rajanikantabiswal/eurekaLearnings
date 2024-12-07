@@ -223,8 +223,8 @@ img {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -259,7 +259,7 @@ img {
     transition: 0.5s;
 }
 .sub-header-left ul li a:hover {
-    color: #c664ff;
+    color: #b40707;
 }
 .right-sub ul {
     justify-content: flex-end;
@@ -376,7 +376,7 @@ img {
     top: 84px;
     width: 48%;
     display: flex;
-    border: 1px solid #c664ff;
+    border: 1px solid #b40707;
     border-radius: 12px;
     visibility: hidden;
     opacity: 0;
@@ -393,8 +393,8 @@ img {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     padding: 12px 46px;
     border-radius: 0 12px 12px 0;
@@ -584,8 +584,8 @@ img {
 }
 .Userprofile .dropmenu-end a:hover svg path,
 .Userprofile .dropmenu-end a:hover {
-    color: #c664ff;
-    fill: #c664ff;
+    color: #b40707;
+    fill: #b40707;
 }
 .Userprofile .dropmenu-end a i {
     height: 24px;
@@ -800,8 +800,8 @@ img {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -1238,7 +1238,7 @@ img {
     font-size: 13px;
     font-weight: 600;
     color: var(--color-white);
-    background-color: #C664FF;
+    background-color: #b40707;
     border-radius: 6px;
     padding: 6px 12px;
     z-index: 999;
@@ -1443,8 +1443,8 @@ img {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     ) !important;
     transition: 0.5s;
     background-size: 200% auto !important;
@@ -1535,7 +1535,7 @@ img {
     font-size: 13px;
     font-weight: 600;
     color: var(--color-white);
-    background-color: #c664ff;
+    background-color: #b40707;
     border-radius: 6px;
     padding: 6px 12px;
     z-index: 999;
@@ -1752,8 +1752,8 @@ img {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     ) !important;
     transition: 0.5s;
     background-size: 200% auto;
@@ -2357,8 +2357,8 @@ html .ui-button.ui-state-disabled:active {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-position: left center;
@@ -2535,8 +2535,8 @@ html .ui-button.ui-state-disabled:active {
     background: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     border-radius: 12px;
     padding: 2px;
@@ -2619,8 +2619,8 @@ html .ui-button.ui-state-disabled:active {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     background-size: 200% auto;
     box-shadow: 0 0 20px #eee;
@@ -2732,8 +2732,8 @@ html .ui-button.ui-state-disabled:active {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -2746,8 +2746,8 @@ html .ui-button.ui-state-disabled:active {
     background: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     background-size: 200% auto;
     padding: 15px 0;
@@ -3268,8 +3268,8 @@ html .ui-button.ui-state-disabled:active {
     background: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     color: var(--color-white);
     border-color: transparent;
@@ -3320,8 +3320,8 @@ html .ui-button.ui-state-disabled:active {
     background: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     color: var(--color-white);
     border-color: transparent;
@@ -3739,8 +3739,8 @@ html .ui-button.ui-state-disabled:active {
     background: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     border-radius: 10px;
     padding: 1px;
@@ -3751,8 +3751,8 @@ html .ui-button.ui-state-disabled:active {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     color: var(--color-white);
     border-color: transparent;
@@ -4413,8 +4413,8 @@ textarea::placeholder {
     background-image: linear-gradient(
         to right,
         #ec2426 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-position: center;
@@ -4735,7 +4735,7 @@ ul.my-bootcamps li:nth-last-child(1){
 }
 
 .Userprofile .dropmenu-end a.bootcamp-menu-icon:hover svg path{
-    stroke: #c664ff;
+    stroke: #b40707;
     fill: none;
 }
 .bootcamp-grid-card .entry-title h3{

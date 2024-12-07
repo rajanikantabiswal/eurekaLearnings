@@ -149,8 +149,8 @@
         }
         .header-area .Userprofile .dropmenu-end a:hover svg path, .Userprofile .dropmenu-end a:hover{
             background-color: #000;
-            color: #c664ff;
-            fill: #c664ff;
+            color: #b40707;
+            fill: #b40707;
         }
         .header-area .figure_text{
             color: #fff;
