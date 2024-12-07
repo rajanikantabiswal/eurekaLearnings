@@ -7058,7 +7058,7 @@ span[class*="fi-rr-"]:before {
 }
 
 .btn-join-now {
-    color: #2f57f0 !important;
+    color: #f02f2f !important;
     font-weight: 600;
 }
 
@@ -7069,8 +7069,8 @@ span[class*="fi-rr-"]:before {
 
 .nav.nav-bordered .nav-link:hover,
 .nav.nav-bordered .nav-link.active {
-    border-bottom: 2px solid #2f57f0;
-    color: #2f57f0;
+    border-bottom: 2px solid #f02f2f;
+    color: #f02f2f;
 }
 
 /* overlap content start*/
