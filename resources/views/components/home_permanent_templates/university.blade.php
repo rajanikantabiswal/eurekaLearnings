@@ -240,7 +240,8 @@
                                             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                                         </div> --}}
                                     <h1 class="title-5 lh-normal text-white mb-20px">
-                                        <span class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
+                                        <span
+                                            class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
                                     </h1>
                                     <p class="subtitle-5 fs-15px lh-24px text-white mb-30px">
                                         {{ get_frontend_settings('banner_sub_title') }}</p>
@@ -587,7 +588,8 @@
     <!-- Tuition Area End -->
 
     <!-- Testimonial Area End -->
-    <section>
+
+    {{-- <section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -653,7 +655,110 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section class="testimonials-wrapper section-padding mb-4">
+        <span class="elips left-elips"><img class="builder-editable" builder-identity="1"
+                src="{{ asset('assets/page-builder/block-image/Ellipse 8.png') }}" alt="..."></span>
+        <span class="elips right-elips"><img class="builder-editable" builder-identity="2"
+                src="{{ asset('assets/page-builder/block-image/Ellipse 9.png') }}" alt="..."></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="section-title ">
+                        <span class="title-head builder-editable"
+                            builder-identity="3">{{ get_phrase('Testimonial') }}</span>
+                        <h2 class="title builder-editable" builder-identity="4">
+                            {{ get_phrase('What our clients says about us') }}</h2>
+                        <p class="description mt-5 builder-editable" builder-identity="5">
+                            {{ get_phrase('It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="user-slider owl-carousel owl-theme">
+                        @php
+                            $reviews = DB::table('user_reviews')->get();
+                        @endphp
+
+                        @if ($reviews->isEmpty())
+                            <!-- Your code for empty reviews -->
+                            No review found
+                        @else
+                            @foreach ($reviews as $review)
+                            @php
+                                    $userDetails = DB::table('users')
+                                        ->where('id', $review->user_id)
+                                        ->first();
+                                @endphp
+                                <!-- Single User Opinion -->
+                                <div class="single-opinion">
+                                    <div class="user-image">
+                                        <img class="builder-editable" builder-identity="6"
+                                            src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
+                                            alt="">
+                                    </div>
+                                    <div class="testimonial-border">
+                                        <div class="testimonial-des">
+                                            <p class="description overlay-content overlay-content-max-h-150">
+                                                <span class="builder-editable"
+                                                    builder-identity="7">{{ $review->review }}</span>
+                                            </p>
+                                            <div class="user-info d-flex">
+                                                <div class="ellipsis-line-2">
+                                                    <h4><span class="builder-editable"
+                                                            builder-identity="8">{{ $userDetails->name }}</span>
+                                                    </h4>
+                                                    <p><span class="builder-editable"
+                                                            builder-identity="9">{{ $userDetails->email }}</span>
+                                                    </p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    @for ($i = 1; $i <= 5; $i++)
+                                                        @if ($i <= $review->rating)
+                                                            <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
+                                                                alt="">
+                                                        @else
+                                                            <img src="{{ asset('assets/frontend/default/image/star.svg') }}"
+                                                                alt="">
+                                                        @endif
+                                                    @endfor
+                                                    <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">
+                                                        ({{ $review->rating }})</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <script>
+        $('.testimonials-wrapper .user-slider').owlCarousel({
+            loop: false,
+            autoplay: false,
+            margin: 10,
+            nav: true,
+            navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+    </script>
+
     <!-- Testimonial Area End -->
 
 
