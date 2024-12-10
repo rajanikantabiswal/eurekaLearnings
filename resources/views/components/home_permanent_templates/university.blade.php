@@ -686,50 +686,54 @@
                             No review found
                         @else
                             @foreach ($reviews as $review)
-                            @php
+                                @php
                                     $userDetails = DB::table('users')
                                         ->where('id', $review->user_id)
                                         ->first();
                                 @endphp
-                                <!-- Single User Opinion -->
-                                <div class="single-opinion">
-                                    <div class="user-image">
-                                        <img class="builder-editable" builder-identity="6"
-                                            src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
-                                            alt="">
-                                    </div>
-                                    <div class="testimonial-border">
-                                        <div class="testimonial-des">
-                                            <p class="description overlay-content overlay-content-max-h-150">
-                                                <span class="builder-editable"
-                                                    builder-identity="7">{{ $review->review }}</span>
-                                            </p>
-                                            <div class="user-info d-flex">
-                                                <div class="ellipsis-line-2">
-                                                    <h4><span class="builder-editable"
-                                                            builder-identity="8">{{ $userDetails->name }}</span>
-                                                    </h4>
-                                                    <p><span class="builder-editable"
-                                                            builder-identity="9">{{ $userDetails->email }}</span>
-                                                    </p>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-1">
-                                                    @for ($i = 1; $i <= 5; $i++)
-                                                        @if ($i <= $review->rating)
-                                                            <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
-                                                                alt="">
-                                                        @else
-                                                            <img src="{{ asset('assets/frontend/default/image/star.svg') }}"
-                                                                alt="">
-                                                        @endif
-                                                    @endfor
-                                                    <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">
-                                                        ({{ $review->rating }})</h6>
+
+                                @if ($userDetails)
+                                    <!-- Single User Opinion -->
+                                    <div class="single-opinion">
+                                        <div class="user-image">
+                                            <img class="builder-editable" builder-identity="6"
+                                                src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
+                                                alt="">
+                                        </div>
+                                        <div class="testimonial-border">
+                                            <div class="testimonial-des">
+                                                <p class="description overlay-content overlay-content-max-h-150">
+                                                    <span class="builder-editable"
+                                                        builder-identity="7">{{ $review->review }}</span>
+                                                </p>
+                                                <div class="user-info d-flex">
+                                                    <div class="ellipsis-line-2">
+                                                        <h4><span class="builder-editable"
+                                                                builder-identity="8">{{ $userDetails->name }}</span>
+                                                        </h4>
+                                                        <p><span class="builder-editable"
+                                                                builder-identity="9">{{ $userDetails->email }}</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            @if ($i <= $review->rating)
+                                                                <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
+                                                                    alt="">
+                                                            @else
+                                                                <img src="{{ asset('assets/frontend/default/image/star.svg') }}"
+                                                                    alt="">
+                                                            @endif
+                                                        @endfor
+                                                        <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">
+                                                            ({{ $review->rating }})
+                                                        </h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
                             @endforeach
                         @endif
                     </div>
