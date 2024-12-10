@@ -54,22 +54,25 @@
 
 
         /* Start sub header */
-        .sub-header{
+        .sub-header {
             background-color: #121421;
             border-color: #645b5b;
         }
-        .sub-header .sub-header-left a{
+
+        .sub-header .sub-header-left a {
             color: #fff !important;
         }
-        
-        .sub-header .nice-select.form-select{
+
+        .sub-header .nice-select.form-select {
             filter: invert(1);
             background-color: #edebdd;
         }
+
         /* End sub header */
 
 
-        .sub-header, .header-area {
+        .sub-header,
+        .header-area {
             --font-family: "Poppins", sans-serif;
             --bg-white: #000;
             --text-color: #9e9e9e;
@@ -80,6 +83,7 @@
             --box-shadow: rgba(76, 76, 109, 0.2) 12px 11px 34px 11px;
             --box-shadow-2: rgba(79, 79, 112, 0.2) 0px 7px 29px 0px;
         }
+
         .offcanvas.offcanvas-start {
             --font-family: "Poppins", sans-serif;
             --bg-white: #fff;
@@ -93,19 +97,24 @@
         }
 
         /* Start main header */
-        .header-area{
+        .header-area {
             background-color: #121421;
         }
-        .header-area .header-light-logo{
+
+        .header-area .header-light-logo {
             display: block !important;
         }
-        .header-area .header-dark-logo{
+
+        .header-area .header-dark-logo {
             display: none !important;
         }
-        .header-area .primary-menu .have-mega-menu .menu-parent-a::after{
+
+        .header-area .primary-menu .have-mega-menu .menu-parent-a::after {
             background: #000;
         }
-        .header-area .primary-menu .have-mega-menu .menu-parent-a.active::after, .primary-menu .have-mega-menu .menu-parent-a:hover::after{
+
+        .header-area .primary-menu .have-mega-menu .menu-parent-a.active::after,
+        .primary-menu .have-mega-menu .menu-parent-a:hover::after {
             border: 6px solid #ffffff !important;
             border-right: 6px solid #000000 !important;
             border-bottom: 0 !important;
@@ -119,59 +128,76 @@
             left: auto !important;
             width: 10px !important;
         }
-        .header-area .form-control{
+
+        .header-area .form-control {
             background-color: #121421;
             border-color: #645b5b;
         }
-        .header-area .form-control:focus{
+
+        .header-area .form-control:focus {
             background-color: #232323;
             color: #c7c7c7 !important;
             border-color: #807a7a;
         }
-        .header-area .main-mega-menu{
+
+        .header-area .main-mega-menu {
             background: #000000;
             box-shadow: 0 12px 20px #a7a7a754;
             border: 1px solid #4c4c4c;
         }
-        .header-area .mega_list li a:hover{
+
+        .header-area .mega_list li a:hover {
             background: #2a2a2a;
             color: #ffff;
         }
-        .header-area .child_category_menu{
+
+        .header-area .child_category_menu {
             background: #000;
         }
-        .header-area .us-btn{
+
+        .header-area .us-btn {
             background-color: #121421;
         }
-        .header-area .Userprofile .dropmenu-end{
+
+        .header-area .Userprofile .dropmenu-end {
             background-color: #000000;
             box-shadow: 0 12px 20px #a7a7a754;
         }
-        .header-area .Userprofile .dropmenu-end a:hover svg path, .Userprofile .dropmenu-end a:hover{
+
+        .header-area .Userprofile .dropmenu-end a:hover svg path,
+        .Userprofile .dropmenu-end a:hover {
             background-color: #000;
             color: #b40707;
             fill: #b40707;
         }
-        .header-area .figure_text{
+
+        .header-area .figure_text {
             color: #fff;
         }
-        .header-area .primary-end a path{
+
+        .header-area .primary-end a path {
             stroke: var(--text-color);
         }
-        .header-area .primary-end a path:hover, .primary-end a.active path{
+
+        .header-area .primary-end a path:hover,
+        .primary-end a.active path {
             stroke: #fff;
         }
-        .header-area .toggle-bar{
+
+        .header-area .toggle-bar {
             color: #9e9e9e !important;
         }
-        .header-area .gradient{
+
+        .header-area .gradient {
             box-shadow: none;
             border-left: 0;
         }
-        .service-card-banner-2>img{
+
+        .service-card-banner-2>img {
             height: 200px;
             object-fit: cover;
         }
+
         /* End main header */
     </style>
 @endpush
@@ -182,11 +208,47 @@
             <div class="row mb-100px">
                 <div class="col-md-12">
                     <div class="lms-banner-area-4">
-                        <div class="uv-banner-content">
+                        {{-- <div class="uv-banner-content">
                             <h1 class="title-5 max-w-850px fs-56px lh-normal fw-500 text-white text-center mb-20px"><span class="highlight-title">{{ get_frontend_settings('banner_title') }}</span></h1>
                             <p class="subtitle-5 max-w-620px fs-15px lh-24px text-white text-center mb-30px">{{ get_frontend_settings('banner_sub_title') }}</p>
                             <div class="d-flex justify-content-center">
                                 <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
+                            </div>
+                        </div> --}}
+
+                        <div class="uv-banner-content">
+                            <div class="row flex-lg-row-reverse ">
+                                <div class="col-lg-4">
+                                    <div style="" class="lc-block mb-4">
+                                        <img class="img-fluid shadow"
+                                            src="{{ asset('assets/frontend/default/image/rkbanner1.webp') }}"
+                                            alt="Photo by Kaloyan Draganov">
+                                    </div><!-- /lc-block -->
+                                </div>
+                                <div class="col-lg-8 d-flex flex-column justify-content-center">
+                                    {{-- <div class="lc-block mb-4">
+                                            <div editable="rich">
+                                                <h1 class="rfs-30 fw-bold">Lorem ipsum dolor sit amet</h1>
+                                            </div>
+                                        </div>
+                                        <div class="lc-block mb-4">
+                                            <div editable="rich">
+                                                <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit</p>
+                                            </div>
+                                        </div>
+                                        <div class="lc-block">
+                                            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                        </div> --}}
+                                    <h1 class="title-5 lh-normal text-white mb-20px">
+                                        <span class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
+                                    </h1>
+                                    <p class="subtitle-5 fs-15px lh-24px text-white mb-30px">
+                                        {{ get_frontend_settings('banner_sub_title') }}</p>
+                                    <div class="d-flex text-lft">
+                                        <a href="{{ route('courses') }}"
+                                            class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Swiper -->
@@ -195,7 +257,7 @@
                                 @php
                                     $university = json_decode(get_homepage_settings('university'));
                                     $slider_items = json_decode($university->slider_items ?? '{}', true) ?? [];
-                                    @endphp
+                                @endphp
                                 @foreach ($slider_items as $key => $slider_items)
                                     @php $ext = pathinfo($slider_items, PATHINFO_EXTENSION); @endphp
                                     @if (file_exists(public_path($slider_items)))
@@ -210,11 +272,16 @@
                                         <div class="swiper-slide">
                                             <div class="scale-single-slide">
                                                 <div class="lms-video">
-                                                    @if($ext == 'mp4' || $ext == 'webm')
-                                                        <video class="universityPlayer" id="player{{ $key }}" src="{{ $slider_items }}" controls></video>
+                                                    @if ($ext == 'mp4' || $ext == 'webm')
+                                                        <video class="universityPlayer" id="player{{ $key }}"
+                                                            src="{{ $slider_items }}" controls></video>
                                                     @else
-                                                        <div class="plyr__video-embed universityPlayer" id="player{{ $key }}">
-                                                            <iframe src="{{ $slider_items }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        <div class="plyr__video-embed universityPlayer"
+                                                            id="player{{ $key }}">
+                                                            <iframe src="{{ $slider_items }}" title="YouTube video player"
+                                                                frameborder="0"
+                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                                allowfullscreen></iframe>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -250,7 +317,8 @@
                                 </div>
                                 <div>
                                     <h4 class="title-5 fs-20px lh-28px fw-500 mb-2 text-center">{{ $category->title }}</h4>
-                                    <p class="subtitle-5 fs-15px lh-25px text-center">{{ count_category_courses($category->id) }} {{ get_phrase('courses') }}</p>
+                                    <p class="subtitle-5 fs-15px lh-25px text-center">
+                                        {{ count_category_courses($category->id) }} {{ get_phrase('courses') }}</p>
                                 </div>
                             </div>
                         </a>
@@ -272,20 +340,23 @@
                             $storImage = json_decode(get_homepage_settings('university'));
                         @endphp
                         @if (isset($storImage->faq_image))
-                            <img src="{{ asset('uploads/home_page_image/university/' . $storImage->image) }}" alt="">
+                            <img src="{{ asset('uploads/home_page_image/university/' . $storImage->image) }}"
+                                alt="">
                         @endif
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-6">
                     <div class="ms-xl-3">
-                        <h2 class="title-5 fs-32px lh-42px fw-500 mb-30px">{{ get_phrase('Creating A Community Of Life Long Learners') }}</h2>
+                        <h2 class="title-5 fs-32px lh-42px fw-500 mb-30px">
+                            {{ get_phrase('Creating A Community Of Life Long Learners') }}</h2>
                         <p class="subtitle-5 fs-15px lh-25px mb-30px">
                             {{ get_phrase("Our LMS goes beyond just providing courses. It's a platform designed to ignite curiosity and empower your lifelong learning journey.  This supportive community provides a space to ask questions, no matter how big or small, and receive insightful answers from experienced learners and subject-matter experts.") }}
                         </p>
                         <p class="subtitle-5 fs-15px lh-25px mb-30px">
                             {{ get_phrase("Share your own experiences and challenges, and find encouragement and inspiration from others on a similar path. The diverse perspectives within our community will broaden your horizons and challenge your thinking, fostering a deeper understanding and a richer learning experience.  Together, we'll transform learning from a solitary pursuit into a collaborative adventure, where shared knowledge fuels individual growth and collective discovery.") }}
                         </p>
-                        <a href="{{ route('about.us') }}" class="btn btn-danger-1">{{ get_phrase('Learn more about us') }}</a>
+                        <a href="{{ route('about.us') }}"
+                            class="btn btn-danger-1">{{ get_phrase('Learn more about us') }}</a>
                     </div>
                 </div>
             </div>
@@ -298,9 +369,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-2 mb-50px">
-                        <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">{{ get_phrase('Our Online Courses') }}</h1>
+                        <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">
+                            {{ get_phrase('Our Online Courses') }}</h1>
                         <p class="subtitle-5 fs-15px lh-24px text-center">
-                            {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}</p>
+                            {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -325,39 +398,49 @@
                                             <img src="{{ get_image($row->thumbnail) }}" alt="banner">
                                         </div>
                                         <div class="list-view-details1 w-100">
-                                            <h5 class="title-5 fs-18px lh-26px fw-500 mb-12px">{{ ucfirst($row->title) }}</h5>
-                                            <p class="subtitle-5 fs-14px lh-24px mb-10px">{{ Str::limit(strip_tags($row->short_description), 78) }}</p>
-                                            <div class="card-leason-rating2 d-flex gap-2 align-items-center justify-content-between">
+                                            <h5 class="title-5 fs-18px lh-26px fw-500 mb-12px">{{ ucfirst($row->title) }}
+                                            </h5>
+                                            <p class="subtitle-5 fs-14px lh-24px mb-10px">
+                                                {{ Str::limit(strip_tags($row->short_description), 78) }}</p>
+                                            <div
+                                                class="card-leason-rating2 d-flex gap-2 align-items-center justify-content-between">
                                                 <div class="card-icon-text4 d-flex gap-2 align-items-center">
                                                     <span class="fi-rr-book-open-cover"></span>
-                                                    <p class="subtitle-5 fs-13px lh-26px">{{ lesson_count($row->id) }} {{ get_phrase('lesson') }}</p>
+                                                    <p class="subtitle-5 fs-13px lh-26px">{{ lesson_count($row->id) }}
+                                                        {{ get_phrase('lesson') }}</p>
                                                 </div>
                                                 <div class="card-rating3 d-flex gap-1 align-items-center">
                                                     @if ($average_rating !== null)
-                                                        <p class="title-5 fs-15px lh-26px fw-medium">{{ number_format($average_rating, 1) }}</p>
-                                                        <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}" alt="">
+                                                        <p class="title-5 fs-15px lh-26px fw-medium">
+                                                            {{ number_format($average_rating, 1) }}</p>
+                                                        <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
+                                                            alt="">
                                                     @endif
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
                                                 <div class="d-flex align-items-center gap-12px">
                                                     <div class="card-author-sm">
-                                                        <img src="{{ course_instructor_image($row->id) }}" alt="">
+                                                        <img src="{{ course_instructor_image($row->id) }}"
+                                                            alt="">
                                                     </div>
-                                                    <div class="title-5 fs-13px lh-26px fw-medium">{{ course_by_instructor($row->id)->name }}</div>
+                                                    <div class="title-5 fs-13px lh-26px fw-medium">
+                                                        {{ course_by_instructor($row->id)->name }}</div>
                                                 </div>
 
 
                                                 @if (isset($row->is_paid) && $row->is_paid == 0)
-                                                    <h4 class="title-5 fs-20px lh-26px fw-500 text-danger-2">{{ get_phrase('Free') }}</h4>
+                                                    <h4 class="title-5 fs-20px lh-26px fw-500 text-danger-2">
+                                                        {{ get_phrase('Free') }}</h4>
                                                 @elseif (isset($row->discount_flag) && $row->discount_flag == 1)
                                                     <h4 class="title-5 fs-20px lh-26px fw-500 text-danger-2">
                                                         {{ currency(number_format($row->discounted_price, 2)) }}
-                                                        <del class="fs-14px text-secondary">{{currency($row->price)}}</del>
+                                                        <del
+                                                            class="fs-14px text-secondary">{{ currency($row->price) }}</del>
                                                     </h4>
-                                                    
                                                 @else
-                                                    <h4 class="title-5 fs-20px lh-26px fw-500 text-danger-2">{{ currency(number_format($row->price, 2)) }}</h4>
+                                                    <h4 class="title-5 fs-20px lh-26px fw-500 text-danger-2">
+                                                        {{ currency(number_format($row->price, 2)) }}</h4>
                                                 @endif
                                             </div>
                                         </div>
@@ -385,9 +468,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-2 mb-50px">
-                        <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">{{ get_phrase('Think more clearly') }}</h1>
+                        <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">
+                            {{ get_phrase('Think more clearly') }}</h1>
                         <p class="subtitle-5 fs-15px lh-24px text-center">
-                            {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}</p>
+                            {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -408,18 +493,21 @@
                                 </div>
                                 <div class="event-details-banner-wrap w-100 d-flex">
                                     <div>
-                                        <h3 class="title-5 fs-20px lh-26px fw-500 mb-14px">{{ $motivational_speech['title'] }}</h3>
+                                        <h3 class="title-5 fs-20px lh-26px fw-500 mb-14px">
+                                            {{ $motivational_speech['title'] }}</h3>
                                         <div class="d-flex align-items-center gap-12px mb-20px">
                                             <div class="lms-author-sm">
                                                 @if ($admininfo->photo)
                                                     <img src="{{ get_image($admininfo->photo) }}" alt="">
                                                 @else
-                                                    <img src="{{ asset('uploads/users/admin/placeholder/placeholder.png') }}" alt="">
+                                                    <img src="{{ asset('uploads/users/admin/placeholder/placeholder.png') }}"
+                                                        alt="">
                                                 @endif
                                             </div>
                                             <div class="title-5 fs-13px lh-26px fw-medium">{{ $admininfo->name }}</div>
                                         </div>
-                                        <p class="subtitle-5 fs-15px lh-25px">{{ $motivational_speech['description'] }}</p>
+                                        <p class="subtitle-5 fs-15px lh-25px">{{ $motivational_speech['description'] }}
+                                        </p>
                                     </div>
                                     <div class="lms-event1-banner">
                                         @if ($motivational_speech['image'])
@@ -443,9 +531,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-2 mb-50px">
-                        <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">{{ get_phrase('Frequently Asked Questions') }}</h1>
+                        <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">
+                            {{ get_phrase('Frequently Asked Questions') }}</h1>
                         <p class="subtitle-5 fs-15px lh-24px text-center">
-                            {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}</p>
+                            {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -453,7 +543,8 @@
                 <div class="col-lg-5">
                     <div class="tuition-banner">
                         @if (isset($storImage->faq_image))
-                            <img src="{{ asset('uploads/home_page_image/university/' . $storImage->faq_image) }}" alt="">
+                            <img src="{{ asset('uploads/home_page_image/university/' . $storImage->faq_image) }}"
+                                alt="">
                         @endif
                     </div>
                 </div>
@@ -462,16 +553,24 @@
                         <div class="lms-1-card-body p-40px">
                             <div class="accordion qnaaccordion-five" id="accordionExample5">
                                 @php
-                                    $faqs = count(json_decode(get_frontend_settings('website_faqs'), true)) > 0 ? json_decode(get_frontend_settings('website_faqs'), true) : [['question' => '', 'answer' => '']];
+                                    $faqs =
+                                        count(json_decode(get_frontend_settings('website_faqs'), true)) > 0
+                                            ? json_decode(get_frontend_settings('website_faqs'), true)
+                                            : [['question' => '', 'answer' => '']];
                                 @endphp
                                 @foreach ($faqs as $key => $faq)
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="{{ $key }}">
-                                            <button class="accordion-button py-4 {{ $key == 0 ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#qnaOne{{ $key }}" aria-expanded="true" aria-controls="qnaOne">
+                                            <button class="accordion-button py-4 {{ $key == 0 ? '' : 'collapsed' }}"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#qnaOne{{ $key }}" aria-expanded="true"
+                                                aria-controls="qnaOne">
                                                 {{ $faq['question'] }}
                                             </button>
                                         </h2>
-                                        <div id="qnaOne{{ $key }}" class="accordion-collapse collapse px-0 {{ $key == 0 ? 'show' : '' }}" aria-labelledby="{{ $key }}" data-bs-parent="#accordionExample5">
+                                        <div id="qnaOne{{ $key }}"
+                                            class="accordion-collapse collapse px-0 {{ $key == 0 ? 'show' : '' }}"
+                                            aria-labelledby="{{ $key }}" data-bs-parent="#accordionExample5">
                                             <div class="accordion-body">
                                                 <p class="answer">{{ $faq['answer'] }}</p>
                                             </div>
@@ -493,7 +592,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-2 mb-30px">
-                        <h1 class="title-5 fs-32px lh-42px fw-500 text-center">{{ get_phrase('What the people Thinks About Us') }}</h1>
+                        <h1 class="title-5 fs-32px lh-42px fw-500 text-center">
+                            {{ get_phrase('What the people Thinks About Us') }}</h1>
                     </div>
                 </div>
             </div>
@@ -516,11 +616,14 @@
                                             <div class="d-flex justify-content-between gap-2 mb-14px">
                                                 <div class="testimonial-profile-wrap2 d-flex align-items-center ">
                                                     <div class="testimonial-profile-2">
-                                                        <img src="{{ get_image_by_id($userDetails->id) }}" alt="">
+                                                        <img src="{{ get_image_by_id($userDetails->id) }}"
+                                                            alt="">
                                                     </div>
                                                     <div>
-                                                        <h4 class="title-5 fs-18px lh-25px fw-semibold mb-5px">{{ $userDetails->name }}</h4>
-                                                        <p class="subtitle-5 fs-14px lh-24px">{{ date('h:i A', strtotime($review->created_at)) }}</p>
+                                                        <h4 class="title-5 fs-18px lh-25px fw-semibold mb-5px">
+                                                            {{ $userDetails->name }}</h4>
+                                                        <p class="subtitle-5 fs-14px lh-24px">
+                                                            {{ date('h:i A', strtotime($review->created_at)) }}</p>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-quate-1">
@@ -531,12 +634,15 @@
                                             <div class="d-flex align-items-center gap-1">
                                                 @for ($i = 1; $i <= 5; $i++)
                                                     @if ($i <= $review->rating)
-                                                        <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}" alt="">
+                                                        <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
+                                                            alt="">
                                                     @else
-                                                        <img src="{{ asset('assets/frontend/default/image/star.svg') }}" alt="">
+                                                        <img src="{{ asset('assets/frontend/default/image/star.svg') }}"
+                                                            alt="">
                                                     @endif
                                                 @endfor
-                                                <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">({{ $review->rating }})</h6>
+                                                <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">
+                                                    ({{ $review->rating }})</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -558,9 +664,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title-1 mb-50px">
-                            <h1 class="title-3 mb-26px fs-40px lh-52px fw-medium text-center">{{ get_phrase('Our Blog') }}</h1>
+                            <h1 class="title-3 mb-26px fs-40px lh-52px fw-medium text-center">{{ get_phrase('Our Blog') }}
+                            </h1>
                             <p class="subtitle-2 fs-15px lh-24px text-center">
-                                {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}</p>
+                                {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -574,10 +682,12 @@
                                     </div>
                                     <div class="blog-post1-details">
                                         <h3 class="title-5 mb-3 pt-2">{{ ucfirst($blog->title) }}</h3>
-                                        <p class="info ellipsis-line-2">{{ ellipsis(strip_tags($blog->description), 160) }}</p>
+                                        <p class="info ellipsis-line-2">
+                                            {{ ellipsis(strip_tags($blog->description), 160) }}</p>
                                         <p class="read-more d-flex align-items-center">
                                             <span>{{ get_phrase('Read More') }}</span>
-                                            <img src="{{ asset('assets/frontend/default/image/angle-right-black-18.svg') }}" alt="">
+                                            <img src="{{ asset('assets/frontend/default/image/angle-right-black-18.svg') }}"
+                                                alt="">
                                         </p>
                                     </div>
                                 </div>
@@ -617,9 +727,9 @@
 
         function playerPlayPause() {
             setTimeout(function() {
-                if($('.swiper-slide-active .lms-video .plyr:not(.plyr--playing)').length > 0){
+                if ($('.swiper-slide-active .lms-video .plyr:not(.plyr--playing)').length > 0) {
                     $('.swiper-slide-active .lms-video .plyr:not(.plyr--playing)').trigger('click');
-                }else{
+                } else {
                     $('.plyr--playing').trigger('click');
                 }
             }, 600);
