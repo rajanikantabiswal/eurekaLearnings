@@ -53,149 +53,37 @@
         }
 
 
-        /* Start sub header */
-        .sub-header {
-            background-color: #121421;
-            border-color: #645b5b;
+
+
+        .scale-slider {
+            width: 80% !important;
         }
 
-        .sub-header .sub-header-left a {
-            color: #fff !important;
+        .els-section1 {
+            padding-top: 100px;
+            background: url("{{ asset('assets/frontend/default/images/banner_bg-1.webp') }}");
+            background-size: cover;
+            margin-bottom: 50px;
         }
 
-        .sub-header .nice-select.form-select {
-            filter: invert(1);
-            background-color: #edebdd;
+        .slider-wrapper {
+            margin-top: -10%;
+            padding-bottom: 100px;
+
         }
 
-        /* End sub header */
-
-
-        .sub-header,
         .header-area {
-            --font-family: "Poppins", sans-serif;
-            --bg-white: #000;
-            --text-color: #9e9e9e;
-            --color-white: #000;
-            --color-1: #fff;
-            --color-2: #d5e0f3;
-            --color-black: #fff;
-            --box-shadow: rgba(76, 76, 109, 0.2) 12px 11px 34px 11px;
-            --box-shadow-2: rgba(79, 79, 112, 0.2) 0px 7px 29px 0px;
+            position: fixed;
+            width: 100%;
+            background: transparent;
+            z-index: 100;
         }
 
-        .offcanvas.offcanvas-start {
-            --font-family: "Poppins", sans-serif;
-            --bg-white: #fff;
-            --text-color: #6b7385;
-            --color-white: #fff;
-            --color-1: #ec2426;
-            --color-2: #000000;
-            --color-black: #000;
-            --box-shadow: rgba(100, 100, 111, 0.2) 12px 11px 34px 11px;
-            --box-shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-
-        /* Start main header */
-        .header-area {
-            background-color: #121421;
-        }
-
-        .header-area .header-light-logo {
-            display: block !important;
-        }
-
-        .header-area .header-dark-logo {
-            display: none !important;
-        }
-
-        .header-area .primary-menu .have-mega-menu .menu-parent-a::after {
-            background: #000;
-        }
-
-        .header-area .primary-menu .have-mega-menu .menu-parent-a.active::after,
-        .primary-menu .have-mega-menu .menu-parent-a:hover::after {
-            border: 6px solid #ffffff !important;
-            border-right: 6px solid #000000 !important;
-            border-bottom: 0 !important;
-            border-left: 6px solid #000000 !important;
-            vertical-align: middle !important;
-            border-radius: 3px !important;
-            background: #fff !important;
-            position: absolute !important;
-            right: -18px !important;
-            top: 9px !important;
-            left: auto !important;
-            width: 10px !important;
-        }
-
-        .header-area .form-control {
-            background-color: #121421;
-            border-color: #645b5b;
-        }
-
-        .header-area .form-control:focus {
-            background-color: #232323;
-            color: #c7c7c7 !important;
-            border-color: #807a7a;
-        }
-
-        .header-area .main-mega-menu {
-            background: #000000;
-            box-shadow: 0 12px 20px #a7a7a754;
-            border: 1px solid #4c4c4c;
-        }
-
-        .header-area .mega_list li a:hover {
-            background: #2a2a2a;
-            color: #ffff;
-        }
-
-        .header-area .child_category_menu {
-            background: #000;
-        }
-
-        .header-area .us-btn {
-            background-color: #121421;
-        }
-
-        .header-area .Userprofile .dropmenu-end {
-            background-color: #000000;
-            box-shadow: 0 12px 20px #a7a7a754;
-        }
-
-        .header-area .Userprofile .dropmenu-end a:hover svg path,
-        .Userprofile .dropmenu-end a:hover {
-            background-color: #000;
-            color: #b40707;
-            fill: #b40707;
-        }
-
-        .header-area .figure_text {
-            color: #fff;
-        }
-
-        .header-area .primary-end a path {
-            stroke: var(--text-color);
-        }
-
-        .header-area .primary-end a path:hover,
-        .primary-end a.active path {
-            stroke: #fff;
-        }
-
-        .header-area .toggle-bar {
-            color: #9e9e9e !important;
-        }
-
-        .header-area .gradient {
-            box-shadow: none;
-            border-left: 0;
-        }
-
-        .service-card-banner-2>img {
-            height: 200px;
-            object-fit: cover;
+        .header-area.scrolled {
+            background: white;
+            /* Background on scroll */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Optional shadow */
         }
 
         /* End main header */
@@ -204,12 +92,82 @@
 @section('content')
     <!-- Banner Area Start -->
 
-    <section class="lms-banner-section4 px-20">
+    <section class="els-section1">
+        <div class="container ">
+            <div class="row gy-4">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center aos-init aos-animate"
+                    data-aos="zoom-out">
+                    <h1 class="title-5 lh-normal text-black mb-20px">
+                        <span
+                            class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
+                    </h1>
+                    <p class="subtitle-5 fs-15px lh-24px text-black mb-30px">
+                        {{ get_frontend_settings('banner_sub_title') }}</p>
+                    <div class="d-flex text-lft">
+                        <a href="{{ route('courses') }}"
+                            class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-out"
+                    data-aos-delay="200">
+                    <img src="{{ asset('assets/frontend/default/images/banner_img.png') }}" class="img-fluid animated"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- <section>
+        <div class="container slider-wrapper">
+            <!-- Swiper -->
+            <div class="swiper scale-slider scale-slider-main">
+                <div class="swiper-wrapper">
+                    @php
+                        $university = json_decode(get_homepage_settings('university'));
+                        $slider_items = json_decode($university->slider_items ?? '{}', true) ?? [];
+                    @endphp
+                    @foreach ($slider_items as $key => $slider_items)
+                        @php $ext = pathinfo($slider_items, PATHINFO_EXTENSION); @endphp
+                        @if (file_exists(public_path($slider_items)))
+                            <div class="swiper-slide">
+                                <div class="scale-single-slide">
+                                    <div class="scale-slide-image">
+                                        <img src="{{ asset($slider_items) }}" alt="banner">
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="swiper-slide">
+                                <div class="scale-single-slide">
+                                    <div class="lms-video">
+                                        @if ($ext == 'mp4' || $ext == 'webm')
+                                            <video class="universityPlayer" id="player{{ $key }}"
+                                                src="{{ $slider_items }}" controls></video>
+                                        @else
+                                            <div class="plyr__video-embed universityPlayer" id="player{{ $key }}">
+                                                <iframe src="{{ $slider_items }}" title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="swiper-button-next" onclick="playerPlayPause()"></div>
+                <div class="swiper-button-prev" onclick="playerPlayPause()"></div>
+            </div>
+        </div>
+    </section> --}}
+
+    {{-- <section class="lms-banner-section4 px-20">
         <div class="container">
             <div class="row mb-100px">
                 <div class="col-md-12">
                     <div class="lms-banner-area-4">
-
+                        
                         <div class="uv-banner-content">
                             <div class="row flex-lg-row-reverse ">
                                 <div class="col-lg-4">
@@ -234,6 +192,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- Swiper -->
                         <div class="swiper scale-slider scale-slider-main w-[70%]">
                             <div class="swiper-wrapper">
@@ -282,7 +241,7 @@
         </div>
         <span class="uv-banner-shape1"></span>
         <span class="uv-banner-shape2"></span>
-    </section>
+    </section> --}}
     <!-- Banner Area End -->
 
     <!-- Service Area Start -->
@@ -796,6 +755,15 @@
 
 @push('js')
     <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-area'); // Select by class name
+            if (window.scrollY > 50) { // Adjust scroll value as needed
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         if ($('.universityPlayer').length > 0) {
             // Select all video elements
             const players = Array.from(document.querySelectorAll('.universityPlayer'));

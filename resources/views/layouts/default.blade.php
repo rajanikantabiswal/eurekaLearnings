@@ -68,7 +68,7 @@
     @endphp
 
     @if ($home_page->is_permanent == 1)
-        @include('components.home_made_by_developer.top_bar')
+        {{-- @include('components.home_made_by_developer.top_bar') --}}
         @include('components.home_made_by_developer.header')
         <section>
             @yield('content')
