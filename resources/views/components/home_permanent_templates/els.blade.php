@@ -203,18 +203,12 @@
 @endpush
 @section('content')
     <!-- Banner Area Start -->
-    <section class="lms-banner-section4">
+
+    <section class="lms-banner-section4 px-20">
         <div class="container">
             <div class="row mb-100px">
                 <div class="col-md-12">
                     <div class="lms-banner-area-4">
-                        {{-- <div class="uv-banner-content">
-                            <h1 class="title-5 max-w-850px fs-56px lh-normal fw-500 text-white text-center mb-20px"><span class="highlight-title">{{ get_frontend_settings('banner_title') }}</span></h1>
-                            <p class="subtitle-5 max-w-620px fs-15px lh-24px text-white text-center mb-30px">{{ get_frontend_settings('banner_sub_title') }}</p>
-                            <div class="d-flex justify-content-center">
-                                <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
-                            </div>
-                        </div> --}}
 
                         <div class="uv-banner-content">
                             <div class="row flex-lg-row-reverse ">
@@ -226,19 +220,7 @@
                                     </div><!-- /lc-block -->
                                 </div>
                                 <div class="col-lg-8 d-flex flex-column justify-content-center">
-                                    {{-- <div class="lc-block mb-4">
-                                            <div editable="rich">
-                                                <h1 class="rfs-30 fw-bold">Lorem ipsum dolor sit amet</h1>
-                                            </div>
-                                        </div>
-                                        <div class="lc-block mb-4">
-                                            <div editable="rich">
-                                                <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit</p>
-                                            </div>
-                                        </div>
-                                        <div class="lc-block">
-                                            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                                        </div> --}}
+                                    
                                     <h1 class="title-5 lh-normal text-white mb-20px">
                                         <span
                                             class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
@@ -253,7 +235,7 @@
                             </div>
                         </div>
                         <!-- Swiper -->
-                        <div class="swiper scale-slider scale-slider-main">
+                        <div class="swiper scale-slider scale-slider-main w-[70%]">
                             <div class="swiper-wrapper">
                                 @php
                                     $university = json_decode(get_homepage_settings('university'));
@@ -304,7 +286,7 @@
     <!-- Banner Area End -->
 
     <!-- Service Area Start -->
-    <section>
+    <section class="px-20">
         <div class="container">
             <div class="row g-28px mb-100px">
                 @foreach (App\Models\Category::take(8)->get() as $category)
@@ -332,7 +314,7 @@
     <!-- Service Area End -->
 
     <!-- Creating A Community Area Start -->
-    <section>
+    <section class="px-20">
         <div class="container">
             <div class="row g-28px align-items-center mb-100px">
                 <div class="col-xl-5 col-lg-6">
@@ -365,7 +347,7 @@
     </section>
     <!-- Creating A Community Area End -->
     <!-- Online Course Area Start -->
-    <section>
+    <section class="px-20">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -464,7 +446,7 @@
     <!-- Online Course Area End -->
 
     <!-- Event Area Start -->
-    <section>
+    <section class="px-20">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -527,7 +509,7 @@
     <!-- Event Area End -->
 
     <!-- Tuition Area Start -->
-    <section class="pt-5">
+    <section class="pt-5 px-20">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -657,7 +639,7 @@
         </div>
     </section> --}}
 
-    <section class="testimonials-wrapper section-padding mb-4">
+    <section class="testimonials-wrapper section-padding mb-4 px-20">
         <span class="elips left-elips"><img class="builder-editable" builder-identity="1"
                 src="{{ asset('assets/page-builder/block-image/Ellipse 8.png') }}" alt="..."></span>
         <span class="elips right-elips"><img class="builder-editable" builder-identity="2"
@@ -741,6 +723,7 @@
             </div>
         </div>
     </section>
+
     <script>
         $('.testimonials-wrapper .user-slider').owlCarousel({
             loop: false,

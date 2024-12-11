@@ -10,13 +10,13 @@
         margin-top: 30px;
         font-weight: 600;
         font-size: 18px;
-        color: #192335;
+        color: #000000;
     }
 
     h1 {
         font-weight: 600;
         font-size: 18px;
-        color: #192335;
+        color: #000000;
     }
 
     .search-box input {

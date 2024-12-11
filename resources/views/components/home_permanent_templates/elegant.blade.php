@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/fonts/dm-sens/stylesheet.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/fonts/rubik/stylesheet.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/fonts/montserrat/stylesheet.css') }}">
+  
+
 @endpush
 @section('content')
     <!-- Homepage 1 Banner Area Start -->
@@ -55,6 +57,9 @@
             </div>
         </div>
     </section>
+
+    
+
     <!-- Homepage 1 Banner Area End -->
 
     <!-- Crash Course Area Start -->

@@ -42,11 +42,11 @@
                                     xmlns="http://www.w3.org/2000/svg" class="m-0 me-3">
                                     <path
                                         d="M18.3307 10.0003C18.3307 14.6003 14.5974 18.3337 9.9974 18.3337C5.3974 18.3337 1.66406 14.6003 1.66406 10.0003C1.66406 5.40033 5.3974 1.66699 9.9974 1.66699C14.5974 1.66699 18.3307 5.40033 18.3307 10.0003Z"
-                                        stroke="#192335" stroke-width="1.25" stroke-linecap="round"
+                                        stroke="#000000" stroke-width="1.25" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path
                                         d="M13.0875 12.65L10.5042 11.1083C10.0542 10.8416 9.6875 10.2 9.6875 9.67497V6.2583"
-                                        stroke="#192335" stroke-width="1.25" stroke-linecap="round"
+                                        stroke="#000000" stroke-width="1.25" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
                                 {{ date('d-M-Y', $bootcamp_details->publish_date) }}
@@ -63,15 +63,15 @@
                                     xmlns="http://www.w3.org/2000/svg" class="m-0 me-3">
                                     <path
                                         d="M1.67188 7.5V6.66667C1.67188 4.16667 3.33854 2.5 5.83854 2.5H14.1719C16.6719 2.5 18.3385 4.16667 18.3385 6.66667V13.3333C18.3385 15.8333 16.6719 17.5 14.1719 17.5H13.3385"
-                                        stroke="#192335" stroke-width="1.25" stroke-linecap="round"
+                                        stroke="#000000" stroke-width="1.25" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M3.07812 9.7583C6.92813 10.25 9.75313 13.0833 10.2531 16.9333" stroke="#192335"
+                                    <path d="M3.07812 9.7583C6.92813 10.25 9.75313 13.0833 10.2531 16.9333" stroke="#000000"
                                         stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M2.1875 12.5586C5.0125 12.9169 7.08751 15.0003 7.45417 17.8253"
-                                        stroke="#192335" stroke-width="1.25" stroke-linecap="round"
+                                        stroke="#000000" stroke-width="1.25" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path d="M1.65234 15.7168C3.06068 15.9001 4.10235 16.9335 4.28568 18.3501"
-                                        stroke="#192335" stroke-width="1.25" stroke-linecap="round"
+                                        stroke="#000000" stroke-width="1.25" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
                                 {{ $count_modules = count_bootcamp_classes($bootcamp_details->id) }}

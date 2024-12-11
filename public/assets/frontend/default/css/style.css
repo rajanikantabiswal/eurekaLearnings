@@ -18,8 +18,8 @@ Default Css
     --bg-white: #fff;
     --text-color: #6b7385;
     --color-white: #fff;
-    --color-1: #2f57ef;
-    --color-2: #192335;
+    --color-1: #ec2426;
+    --color-2: #000000;
     --color-black: #000;
     --box-shadow: rgba(100, 100, 111, 0.2) 12px 11px 34px 11px;
     --box-shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -222,9 +222,9 @@ img {
 .gradient {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -259,7 +259,7 @@ img {
     transition: 0.5s;
 }
 .sub-header-left ul li a:hover {
-    color: #c664ff;
+    color: #b40707;
 }
 .right-sub ul {
     justify-content: flex-end;
@@ -284,6 +284,7 @@ img {
 .logo-image img {
     height: 40px;
     object-fit: cover;
+    border-radius: unset !important;
 }
 .nav-menu {
     display: flex;
@@ -352,7 +353,7 @@ img {
 }
 .primary-end .nice-control .current {
     font-weight: 500;
-    color: #192335;
+    color: #000000;
 }
 .primary-end .nice-select::after {
     display: none;
@@ -376,7 +377,7 @@ img {
     top: 84px;
     width: 48%;
     display: flex;
-    border: 1px solid #c664ff;
+    border: 1px solid #b40707;
     border-radius: 12px;
     visibility: hidden;
     opacity: 0;
@@ -392,9 +393,9 @@ img {
     border: none;
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     padding: 12px 46px;
     border-radius: 0 12px 12px 0;
@@ -584,8 +585,8 @@ img {
 }
 .Userprofile .dropmenu-end a:hover svg path,
 .Userprofile .dropmenu-end a:hover {
-    color: #c664ff;
-    fill: #c664ff;
+    color: #b40707;
+    fill: #b40707;
 }
 .Userprofile .dropmenu-end a i {
     height: 24px;
@@ -799,9 +800,9 @@ img {
 .pr-wrap {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -1238,7 +1239,7 @@ img {
     font-size: 13px;
     font-weight: 600;
     color: var(--color-white);
-    background-color: #C664FF;
+    background-color: #b40707;
     border-radius: 6px;
     padding: 6px 12px;
     z-index: 999;
@@ -1442,9 +1443,9 @@ img {
 .user-slider .owl-nav .owl-next {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     ) !important;
     transition: 0.5s;
     background-size: 200% auto !important;
@@ -1535,7 +1536,7 @@ img {
     font-size: 13px;
     font-weight: 600;
     color: var(--color-white);
-    background-color: #c664ff;
+    background-color: #b40707;
     border-radius: 6px;
     padding: 6px 12px;
     z-index: 999;
@@ -1751,9 +1752,9 @@ img {
 .entry-pagination .pagination li.active a {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     ) !important;
     transition: 0.5s;
     background-size: 200% auto;
@@ -2175,7 +2176,7 @@ html .ui-button.ui-state-disabled:active {
 .btn-wrap .learn-btn {
     color: var(--color-2);
     font-family: "Euclid Circular A";
-    border: 1px solid #2f57ef38;
+    border: 1px solid #ec242638;
 }
 .right-profile .g-title {
     font-size: 32px;
@@ -2356,9 +2357,9 @@ html .ui-button.ui-state-disabled:active {
 .single-motion:hover {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-position: left center;
@@ -2534,9 +2535,9 @@ html .ui-button.ui-state-disabled:active {
 .gradient-border {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     border-radius: 12px;
     padding: 2px;
@@ -2613,14 +2614,14 @@ html .ui-button.ui-state-disabled:active {
     color: var(--color-2) !important;
     transition: 0.5s;
     color: var(--color-2);
-    border: 1px solid #2f57ef38;
+    border: 1px solid #ec242638;
 }
 .c-card:hover .eBtn {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     background-size: 200% auto;
     box-shadow: 0 0 20px #eee;
@@ -2731,9 +2732,9 @@ html .ui-button.ui-state-disabled:active {
 .mybtn-play:hover {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -2745,9 +2746,9 @@ html .ui-button.ui-state-disabled:active {
     color: var(--color-white);
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     background-size: 200% auto;
     padding: 15px 0;
@@ -2906,7 +2907,7 @@ html .ui-button.ui-state-disabled:active {
     top: 50%;
     transform: translateY(-50%);
     right: -37px;
-    background-color: #19233536;
+    background-color: #00000036;
     width: 1px;
     height: 17px;
 }
@@ -3267,9 +3268,9 @@ html .ui-button.ui-state-disabled:active {
 .ps-sidebar .learn-btn:hover {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     color: var(--color-white);
     border-color: transparent;
@@ -3319,9 +3320,9 @@ html .ui-button.ui-state-disabled:active {
 .ps-sidebar .f-socials li a:hover {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     color: var(--color-white);
     border-color: transparent;
@@ -3331,7 +3332,7 @@ html .ui-button.ui-state-disabled:active {
     border-color: transparent;
 }
 .dt_group a {
-    background: #2f57ef33;
+    background: #ec242633;
     padding: 11px 50px;
     border-radius: 41px;
     font-size: 14px;
@@ -3467,7 +3468,7 @@ html .ui-button.ui-state-disabled:active {
 }
 .details-socialsLink .f-socials li a {
     border: 1px solid #6b738559;
-    color: #192335;
+    color: #000000;
     height: 38px;
     width: 38px;
     border-radius: 50%;
@@ -3589,7 +3590,7 @@ html .ui-button.ui-state-disabled:active {
 }
 .comment-wrap .f-socials li a {
     border: 1px solid #6b738559;
-    color: #192335;
+    color: #000000;
     height: 38px;
     width: 38px;
     line-height: 38px;
@@ -3684,7 +3685,7 @@ html .ui-button.ui-state-disabled:active {
 ***************************************************************/
 .footer-area {
     margin-top: 110px;
-    background: linear-gradient(180deg, #1E3764 0%, #192335 100%);
+    background: linear-gradient(180deg, #a40e10 0%, #000000 100%);
     padding: 50px 0 30px 0;
     color: var(--color-white);
 }
@@ -3732,15 +3733,15 @@ html .ui-button.ui-state-disabled:active {
     position: relative;
     border-radius: 10px;
     transition: 0.5s;
-    background: #1e3764;
+    background: #a40e10;
     width: 208px;
 }
 .gradient-border2 {
     background: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     border-radius: 10px;
     padding: 1px;
@@ -3750,9 +3751,9 @@ html .ui-button.ui-state-disabled:active {
 .gradient-border-btn:hover {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     color: var(--color-white);
     border-color: transparent;
@@ -3897,7 +3898,7 @@ textarea::placeholder {
 }
 
 .category.active a {
-    color: #2f57ef;
+    color: #ec2426;
 }
 
 /******** Cart list style start
@@ -4412,9 +4413,9 @@ textarea::placeholder {
     border-bottom: 0;
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-position: center;
@@ -4735,7 +4736,7 @@ ul.my-bootcamps li:nth-last-child(1){
 }
 
 .Userprofile .dropmenu-end a.bootcamp-menu-icon:hover svg path{
-    stroke: #c664ff;
+    stroke: #b40707;
     fill: none;
 }
 .bootcamp-grid-card .entry-title h3{

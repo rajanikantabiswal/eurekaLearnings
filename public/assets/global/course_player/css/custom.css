@@ -95,7 +95,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 25.36px;
-    color: #192335;
+    color: #000000;
 }
 
 .add-question a {
@@ -112,9 +112,9 @@
 .gradient {
     background-image: linear-gradient(
         to right,
-        #2f57ef 0%,
-        #c664ff 51%,
-        #c664ff 100%
+        #ec2426 0%,
+        #b40707 51%,
+        #b40707 100%
     );
     transition: 0.5s;
     background-size: 200% auto;
@@ -147,7 +147,7 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 22.5px;
-    color: #192335;
+    color: #000000;
     padding: 10.5px 0 10.5px 12px;
 }
 
@@ -236,7 +236,7 @@
 }
 
 .group-menu li:hover a {
-    color: #192335;
+    color: #000000;
 }
 
 .group-menu li a path {
@@ -244,7 +244,7 @@
 }
 
 .group-menu li:hover a path {
-    fill: #192335;
+    fill: #000000;
 }
 
 .three-dot {

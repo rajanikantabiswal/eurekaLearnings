@@ -35,15 +35,15 @@
                 fill="url(#paint2_linear_967_646)" />
             <defs>
                 <linearGradient id="paint0_linear_967_646" x1="50.334" y1="71.2858" x2="57.0852" y2="96.7327" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2F57EF" />
+                    <stop stop-color="#ec2426" />
                     <stop offset="0.9375" stop-color="#C464FD" />
                 </linearGradient>
                 <linearGradient id="paint1_linear_967_646" x1="57.1406" y1="113.714" x2="58.5679" y2="123.992" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2F57EF" />
+                    <stop stop-color="#ec2426" />
                     <stop offset="0.9375" stop-color="#C464FD" />
                 </linearGradient>
                 <linearGradient id="paint2_linear_967_646" x1="36.0332" y1="35.3194" x2="60.3448" y2="94.0444" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2F57EF" />
+                    <stop stop-color="#ec2426" />
                     <stop offset="0.9375" stop-color="#C464FD" />
                 </linearGradient>
             </defs>

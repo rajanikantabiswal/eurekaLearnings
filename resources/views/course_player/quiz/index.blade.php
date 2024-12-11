@@ -32,14 +32,14 @@
 
     .gradient-border {
         background: #fff;
-        border: 2px solid #2f57ef;
+        border: 2px solid #ec2426;
         color: #212529;
         transition: .3s;
     }
 
     .gradient-border:hover {
         color: #fff;
-        background: #2f57ef;
+        background: #ec2426;
     }
 
     .serial {
