@@ -3,7 +3,7 @@
 {{-- builder identity value have to be unique under a single file --}}
 
 @php
-    $parent_categories = DB::table('categories')->where('parent_id', 0)->orderBy('title', 'asc')->get();
+    $parent_categories = DB::table('categories')->where('parent_id', 0)->orderBy('created_at', 'asc')->get();
     $current_route = Route::currentRouteName();
 @endphp
 
