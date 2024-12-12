@@ -699,6 +699,12 @@ span[class="fi-rr-"]:before {
     font-size: 50px;
     color: #121421;
 }
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .title-5 {
+        font-size: 34px;
+    }
+}
 
 .subtitle-5 {
     font-family: 'Poppins';

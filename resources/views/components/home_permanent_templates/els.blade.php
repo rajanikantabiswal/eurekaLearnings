@@ -105,9 +105,17 @@
             object-fit: cover;
             /* Ensures the image covers the container while cropping excess */
         }
-        .typed-cursor{
+
+        .typed-cursor {
             font-weight: 300 !important;
             color: rgb(63, 63, 63) !important;
+        }
+
+        .short-title {
+            background: rgb(255, 241, 241);
+            border-radius: 5px;
+            padding: 4px 8px;
+            color: rgba(0, 0, 0, 0.741);
         }
 
 
@@ -120,24 +128,36 @@
     <section class="els-section1">
         <div class="container ">
             <div class="row gy-4">
-                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center aos-init aos-animate"
+                <div class="col-lg-6 order-sm-2 order-lg-1 d-flex flex-column align-items-center align-items-sm-start justify-content-center aos-init aos-animate"
                     data-aos="zoom-out">
+                    <span class="short-title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" color="red" fill="none" class="pe-2">
+                            <path
+                                d="M9.42613 3.06269C10.6836 2.35423 11.3124 2 12 2C12.6876 2 13.3164 2.35423 14.5739 3.06269L16.3239 4.04861C17.6292 4.78401 18.2819 5.15171 18.6409 5.76664C19 6.38157 19 7.13157 19 8.63158V10.3684C19 11.8684 19 12.6184 18.6409 13.2334C18.2819 13.8483 17.6292 14.216 16.3239 14.9514L14.5739 15.9373C13.3164 16.6458 12.6876 17 12 17C11.3124 17 10.6836 16.6458 9.42613 15.9373L7.67613 14.9514C6.37081 14.216 5.71815 13.8483 5.35908 13.2334C5 12.6184 5 11.8684 5 10.3684V8.63158C5 7.13157 5 6.38157 5.35908 5.76664C5.71815 5.15171 6.37081 4.78401 7.67613 4.04861L9.42613 3.06269Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M9 10.1667C9 10.1667 9.75 10.1667 10.5 11.5C10.5 11.5 12.8824 8.16667 15 7.5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16.8825 15L17.5527 18.2099C17.9833 20.2723 18.1986 21.3035 17.7563 21.7923C17.3141 22.281 16.546 21.8606 15.0099 21.0198L12.7364 19.7753C12.3734 19.5766 12.1919 19.4773 12 19.4773C11.8081 19.4773 11.6266 19.5766 11.2636 19.7753L8.99008 21.0198C7.45397 21.8606 6.68592 22.281 6.24365 21.7923C5.80139 21.3035 6.01669 20.2723 6.44731 18.2099L7.11752 15"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>100% Satisfaction Guarantee</span>
                     <h1 class="title-5 lh-normal text-black">
-                        <span class="highlight-title d-inline-flex">{{ get_frontend_settings('typing_effect_title') }}</span>
+                        <span
+                            class="highlight-title d-inline-flex">{{ get_frontend_settings('typing_effect_title') }}</span>
                     </h1>
                     <h1 class="title-5 lh-normal text-danger mb-20px">
                         <span id="typed-output" class="highlight-title d-inline-flex"></span>
                     </h1>
-                    <p class="subtitle-5 fs-15px lh-24px text-black mb-30px">
+                    <p class="subtitle-5 fs-15px lh-24px text-black text-center text-sm-start mb-30px">
                         {{ get_frontend_settings('banner_sub_title') }}</p>
 
                     <div>
                         <!-- Element to contain animated typing -->
-                        
+
                         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
                         <script>
-                            const strings = "{{get_frontend_settings('typing_effect_phrases')}}";
-                            const wordsArray = strings.split(","); 
+                            const strings = "{{ get_frontend_settings('typing_effect_phrases') }}";
+                            const wordsArray = strings.split(",");
                             const typed = new Typed("#typed-output", {
                                 strings: wordsArray,
                                 typeSpeed: 50,
@@ -151,7 +171,7 @@
                         <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
                     </div>
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-out"
+                <div class="col-lg-6 order-sm-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-out"
                     data-aos-delay="200">
                     <img src="{{ asset('assets/frontend/default/images/banner_img.png') }}" class="img-fluid animated"
                         alt="">
@@ -290,8 +310,8 @@
     <!-- Service Area Start -->
     <section class="px-20">
         <div class="container mb-100px">
-            <div class="mb-30px swiper categorySwiper">
-                <div class="swiper-wrapper">
+            <div class="mb-0 mb-sm-4 swiper categorySwiper">
+                <div class="swiper-wrapper mb-4 mb-sm-0">
                     @foreach (App\Models\Category::where('parent_id', 0)->get() as $category)
                         {{-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                             <a class="w-100" href="{{ route('courses', $category->slug) }}">
@@ -327,10 +347,9 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination mt-4"></div>
-
+                <div class="swiper-pagination mt-5"></div>
             </div>
-            <div class="d-flex justify-content-center mt-4">
+            <div class="d-flex justify-content-center mt-2 mt-sm-4">
                 <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('View All') }}</a>
             </div>
         </div>
@@ -428,7 +447,8 @@
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
                                                 <div class="d-flex align-items-center gap-12px">
                                                     <div class="card-author-sm">
-                                                        <img src="{{ course_instructor_image($row->id) }}" alt="">
+                                                        <img src="{{ course_instructor_image($row->id) }}"
+                                                            alt="">
                                                     </div>
                                                     <div class="title-5 fs-13px lh-26px fw-medium">
                                                         {{ course_by_instructor($row->id)->name }}</div>
@@ -834,7 +854,21 @@
                 disableOnInteraction: false,
 
             },
-            loop: true
+            loop: true,
+            breakpoints: {
+                // When screen width is 320px or more (mobile)
+                320: {
+                    slidesPerView: 1,
+                },
+                // When screen width is 768px or more (tablet)
+                768: {
+                    slidesPerView: 2,
+                },
+                // When screen width is 1024px or more (desktop)
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
         });
     </script>
     <script>
