@@ -708,7 +708,9 @@ INSERT INTO `frontend_settings` (`id`, `key`, `value`, `created_at`, `updated_at
 (40, 'contact_info', '{\"email\":\"creativeitem@example.com\",\"phone\":\"67564345676\",\"address\":\"629 12th St, Modesto\",\"office_hours\":\"8\",\"location\":\"40.689880, -74.045203\"}', '2023-10-31 11:08:12', '2024-09-11 04:57:26'),
 (41, 'promo_video_provider', 'youtube', '2023-10-31 11:08:12', '2024-10-27 02:22:09'),
 (42, 'promo_video_link', 'https://youtu.be/4QCaXTOwigw?si=NsFeBQhWNZC859-l', '2023-10-31 11:08:12', '2024-10-27 02:22:09'),
-(43, 'mobile_app_link', 'https://youtu.be/4QCaXTOwigw?si=NsFeBQhWNZC859-l', '2023-10-31 11:08:12', '2024-10-27 02:22:09');
+(43, 'mobile_app_link', 'https://youtu.be/4QCaXTOwigw?si=NsFeBQhWNZC859-l', '2023-10-31 11:08:12', '2024-10-27 02:22:09'),
+(44, 'typing_effect_title', NULL, '2023-10-31 11:08:12', '2024-10-27 02:22:09'),
+(45, 'typing_effect_phrases', NULL, '2023-10-31 11:08:12', '2024-10-27 02:22:09');
 
 -- --------------------------------------------------------
 

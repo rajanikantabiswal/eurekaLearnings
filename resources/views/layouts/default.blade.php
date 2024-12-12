@@ -107,6 +107,7 @@
     <script src="{{ asset('assets/frontend/default/js/jquery.nice-select.min.js') }}"></script>
 
     {{-- New Js Link  --}}
+  
     <script src="{{ asset('assets/frontend/default/vendors/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/default/vendors/counterup/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/default/vendors/counterup/jquery.waypoints.js') }}"></script>

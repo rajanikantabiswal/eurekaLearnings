@@ -105,6 +105,10 @@
             object-fit: cover;
             /* Ensures the image covers the container while cropping excess */
         }
+        .typed-cursor{
+            font-weight: 300 !important;
+            color: rgb(63, 63, 63) !important;
+        }
 
 
         /* End main header */
@@ -118,11 +122,31 @@
             <div class="row gy-4">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center aos-init aos-animate"
                     data-aos="zoom-out">
-                    <h1 class="title-5 lh-normal text-black mb-20px">
-                        <span class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
+                    <h1 class="title-5 lh-normal text-black">
+                        <span class="highlight-title d-inline-flex">{{ get_frontend_settings('typing_effect_title') }}</span>
+                    </h1>
+                    <h1 class="title-5 lh-normal text-danger mb-20px">
+                        <span id="typed-output" class="highlight-title d-inline-flex"></span>
                     </h1>
                     <p class="subtitle-5 fs-15px lh-24px text-black mb-30px">
                         {{ get_frontend_settings('banner_sub_title') }}</p>
+
+                    <div>
+                        <!-- Element to contain animated typing -->
+                        
+                        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                        <script>
+                            const strings = "{{get_frontend_settings('typing_effect_phrases')}}";
+                            const wordsArray = strings.split(","); 
+                            const typed = new Typed("#typed-output", {
+                                strings: wordsArray,
+                                typeSpeed: 50,
+                                backSpeed: 25,
+                                loop: true,
+                            });
+                        </script>
+
+                    </div>
                     <div class="d-flex text-lft">
                         <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
                     </div>
@@ -745,26 +769,7 @@
         });
     </script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".categorySwiper", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-                
-            },
-            loop: true
-        });
-    </script>
 
     <!-- Testimonial Area End -->
 
@@ -815,6 +820,23 @@
 @endsection
 
 @push('js')
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".categorySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+
+            },
+            loop: true
+        });
+    </script>
     <script>
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header-area'); // Select by class name

@@ -12,6 +12,16 @@
     </div>
 
     <div class="fpb-7 mb-3">
+        <label class="form-label ol-form-label" class="form-label ol-form-label" for="typing_effect_title">{{ get_phrase('Typing effect title') }}<span class="required">*</span></label>
+        <input type="text" name = "typing_effect_title" id = "typing_effect_title" class="form-control ol-form-control" value="{{ get_frontend_settings('typing_effect_title') }}" required>
+    </div>
+
+    <div class="fpb-7 mb-3">
+        <label class="form-label ol-form-label" class="form-label ol-form-label" for="typing_effect_phrases">{{ get_phrase('Typing effect phrases') }}<span class="required">*</span></label>
+        <input type="text" name = "typing_effect_phrases" id = "typing_effect_phrases" class="form-control ol-form-control" value="{{ get_frontend_settings('typing_effect_phrases') }}" required>
+    </div>
+
+    <div class="fpb-7 mb-3">
         <label class="form-label ol-form-label" for="youtube_promo_video">{{ get_phrase('Promo Video Provider') }}<span class="required">*</span></label><br>
         <input type="radio" class="form-check-input" value="youtube" name="promo_video_provider" id="youtube_promo_video" @if (get_frontend_settings('promo_video_provider') == 'youtube') checked @endif>&nbsp;<label for="youtube_promo_video">{{ get_phrase('Youtube Video Link') }}</label>
 
@@ -27,7 +37,6 @@
         <label class="form-label ol-form-label" for="promo_video_link">{{ get_phrase('Promo video link') }}<span class="required">*</span></label>
         <input type="text" name = "promo_video_link" id = "promo_video_link" class="form-control ol-form-control" value="{{ get_frontend_settings('promo_video_link') }}" required>
     </div>
-
 
     <div class="fpb-7 mb-3">
         <label class="form-label ol-form-label">{{ get_phrase('Cookie status') }}<span class="required">*</span></label><br>
