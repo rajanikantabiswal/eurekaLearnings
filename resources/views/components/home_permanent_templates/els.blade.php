@@ -86,6 +86,27 @@
             /* Optional shadow */
         }
 
+        .responsive-banner {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            /* Aspect ratio: 16:9 */
+            overflow: hidden;
+            border-radius: 8px;
+            /* Optional: Adds rounded corners */
+        }
+
+        .responsive-banner img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image covers the container while cropping excess */
+        }
+
+
         /* End main header */
     </style>
 @endpush
@@ -98,14 +119,12 @@
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center aos-init aos-animate"
                     data-aos="zoom-out">
                     <h1 class="title-5 lh-normal text-black mb-20px">
-                        <span
-                            class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
+                        <span class="highlight-title d-inline-flex">{{ get_frontend_settings('banner_title') }}</span>
                     </h1>
                     <p class="subtitle-5 fs-15px lh-24px text-black mb-30px">
                         {{ get_frontend_settings('banner_sub_title') }}</p>
                     <div class="d-flex text-lft">
-                        <a href="{{ route('courses') }}"
-                            class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
+                        <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-out"
@@ -246,27 +265,49 @@
 
     <!-- Service Area Start -->
     <section class="px-20">
-        <div class="container">
-            <div class="row g-28px mb-100px">
-                @foreach (App\Models\Category::take(8)->get() as $category)
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a class="w-100" href="{{ route('courses', $category->slug) }}">
-                            <div class="lms-service-card-2 max-sm-350px">
-                                <div class="service-card-banner-2 mb-20px">
-                                    @if ($category->thumbnail)
-                                        <img src="{{ get_image($category->thumbnail) }}" alt="">
-                                    @endif
+        <div class="container mb-100px">
+            <div class="mb-30px swiper categorySwiper">
+                <div class="swiper-wrapper">
+                    @foreach (App\Models\Category::where('parent_id', 0)->get() as $category)
+                        {{-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <a class="w-100" href="{{ route('courses', $category->slug) }}">
+                                <div class="lms-service-card-2 max-sm-350px">
+                                    <div class="service-card-banner-2 mb-20px responsive-banner">
+                                        <img src="{{ $category->thumbnail ? get_image($category->thumbnail) : asset('assets/frontend/default/images/category-placeholder.webp') }}"
+                                            alt="Category Banner" class="img-fluid">
+                                    </div>
+                                    <div>
+                                        <h4 class="title-5 fs-20px lh-28px fw-500 mb-2 text-center">{{ $category->title }}
+                                        </h4>
+                                        <p class="subtitle-5 fs-15px lh-25px text-center">
+                                            {{ count_category_courses($category->id) }} {{ get_phrase('courses') }}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="title-5 fs-20px lh-28px fw-500 mb-2 text-center">{{ $category->title }}</h4>
-                                    <p class="subtitle-5 fs-15px lh-25px text-center">
-                                        {{ count_category_courses($category->id) }} {{ get_phrase('courses') }}</p>
+                            </a>
+                        </div> --}}
+                        <div class="swiper-slide">
+                            <a class="w-100" href="{{ route('courses', $category->slug) }}">
+                                <div class="lms-service-card-2 max-sm-350px">
+                                    <div class="service-card-banner-2 mb-20px responsive-banner">
+                                        <img src="{{ $category->thumbnail ? get_image($category->thumbnail) : asset('assets/frontend/default/images/category-placeholder.webp') }}"
+                                            alt="Category Banner" class="img-fluid">
+                                    </div>
+                                    <div>
+                                        <h4 class="title-5 fs-20px lh-28px fw-500 mb-2 text-center">{{ $category->title }}
+                                        </h4>
+                                        <p class="subtitle-5 fs-15px lh-25px text-center">
+                                            {{ count_category_courses($category->id) }} {{ get_phrase('courses') }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="swiper-pagination mt-4"></div>
 
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('View All') }}</a>
             </div>
         </div>
     </section>
@@ -363,8 +404,7 @@
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
                                                 <div class="d-flex align-items-center gap-12px">
                                                     <div class="card-author-sm">
-                                                        <img src="{{ course_instructor_image($row->id) }}"
-                                                            alt="">
+                                                        <img src="{{ course_instructor_image($row->id) }}" alt="">
                                                     </div>
                                                     <div class="title-5 fs-13px lh-26px fw-medium">
                                                         {{ course_by_instructor($row->id)->name }}</div>
@@ -702,6 +742,27 @@
                     items: 1
                 }
             }
+        });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".categorySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                
+            },
+            loop: true
         });
     </script>
 

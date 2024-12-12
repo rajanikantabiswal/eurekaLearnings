@@ -3896,7 +3896,11 @@ textarea::placeholder {
     line-height: 27px;
     color: var(--text-color) !important;
 }
-
+li.category.parent-category{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #edf0f7;
+}
 .category.active a {
     color: #ec2426;
 }

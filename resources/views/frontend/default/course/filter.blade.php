@@ -33,7 +33,7 @@
             @foreach ($parent_categories as $parent_category)
                 @php $route_queries['category'] = $parent_category->slug; @endphp
 
-                <li class="category @if ($parent_category->slug == $active_category) active @endif" id="{{ $parent_category->slug }}">
+                <li class="parent-category category @if ($parent_category->slug == $active_category) active @endif" id="{{ $parent_category->slug }}">
                     <a href="{{ route('courses', $route_queries) }}"
                         class="d-flex align-items-center justify-content-between">
                         <span>{{ $parent_category->title }}</span>
