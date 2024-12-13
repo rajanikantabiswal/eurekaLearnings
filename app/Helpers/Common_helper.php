@@ -404,7 +404,13 @@ if (!function_exists('total_durations')) {
         $hours   = floor($total_duration / 3600);
         $minutes = floor(($total_duration - ($hours * 3600)) / 60);
         $seconds = floor($total_duration - ($hours * 3600) - ($minutes * 60));
-        return sprintf("%02dh %02dm", $hours, $minutes);
+
+        if($hours <=0 && $minutes <= 0){
+            return null;
+        }else{
+            return sprintf("%02dh %02dm", $hours, $minutes);
+        }
+        
     }
 }
 

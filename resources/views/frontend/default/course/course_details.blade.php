@@ -75,10 +75,15 @@
                                 <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g2.png') }}" alt="...">
                                 {{ total_enroll($course_details->id) }} {{ get_phrase('Students') }}
                             </div>
+                            @php
+                                $totalDuration = total_durations($course_details->id);
+                            @endphp
+                            @if($totalDuration)
                             <div class="col-6 col-sm-6 col-md-4 d-flex align-items-center text-dark">
                                 <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g1.png') }}" alt="...">
-                                {{ total_durations($course_details->id) }}
+                                {{ $totalDuration }}
                             </div>
+                            @endif
                         </div>
 
                         
