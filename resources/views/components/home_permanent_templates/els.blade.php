@@ -740,7 +740,7 @@
                                         <img src="{{ get_image($blog->thumbnail) }}" alt="...">
                                     </div>
                                     <div class="blog-post1-details">
-                                        <h3 class="title-5 mb-3 pt-2">{{ ucfirst($blog->title) }}</h3>
+                                        <h3 class="title-3 mb-3 pt-2">{{ ucfirst($blog->title) }}</h3>
                                         <p class="info ellipsis-line-2">
                                             {{ ellipsis(strip_tags($blog->description), 160) }}</p>
                                         <p class="read-more d-flex align-items-center">
