@@ -64,6 +64,7 @@
             background: url("{{ asset('assets/frontend/default/images/banner_bg-1.webp') }}");
             background-size: cover;
             margin-bottom: 50px;
+            min-height: 100vh;
         }
 
         .slider-wrapper {
@@ -136,7 +137,78 @@
         .swiper-pagination-wrapper {
             position: relative;
         }
+        .swiper-pagination .swiper-pagination-bullet-active{
+            background: #EC2426 !important;
+        }
 
+        .home-icon-box-1 {
+            border-radius: 20px;
+            max-width: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            padding: 5px;
+            margin-left: 40px;
+        }
+
+        .home-icon-box-2 {
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 65%;
+            right: 0;
+            padding: 5px;
+            margin-right: 100px;
+        }
+
+        .bshape_05 {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 70px;
+        }
+
+        .bshape_03 {
+            position: absolute;
+            top: 15%;
+            margin-left: 150px;
+            width: 70px;
+        }
+
+        .bshape_04 {
+            position: absolute;
+            bottom: 25%;
+            left: 45%;
+            width: 80px;
+        }
+
+        .els-navigation-btn{
+            position: absolute;
+            background: #ec2426;
+            border: none;
+            background-size: content;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .swiper-button-next.els-navigation-btn {   
+            right: 100px;
+            background-image: url('{{asset('assets/frontend/default/images/next-arrow.svg')}}');
+        }
+        .swiper-button-prev.els-navigation-btn {
+            left: 100px;
+            background-image: url('{{asset('assets/frontend/default/images/prev-arrow.svg')}}');  
+        }
+        .els-navigation-btn:hover{
+            background-color: #ec2426BD;
+        }
+        .els-navigation-btn::after{
+            content: '';
+        }
 
 
 
@@ -219,23 +291,69 @@
                     <img src="{{ asset('assets/frontend/default/images/banner_img.png') }}" class="img-fluid animated"
                         alt="">
 
-                    {{-- <div class="d-inline-flex card border-light p-1 p-md-4 mb-4 mb-lg-0">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="#ff2458" fill="none">
-                                        <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M16 4C17.6568 4 19 5.34315 19 7C19 8.22309 18.268 9.27523 17.2183 9.7423" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M13.7143 14H10.2857C7.91876 14 5.99998 15.9188 5.99998 18.2857C5.99998 19.2325 6.76749 20 7.71426 20H16.2857C17.2325 20 18 19.2325 18 18.2857C18 15.9188 16.0812 14 13.7143 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M17.7143 13C20.0812 13 22 14.9188 22 17.2857C22 18.2325 21.2325 19 20.2857 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M8 4C6.34315 4 5 5.34315 5 7C5 8.22309 5.73193 9.27523 6.78168 9.7423" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M3.71429 19C2.76751 19 2 18.2325 2 17.2857C2 14.9188 3.91878 13 6.28571 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <h5 class="mb-3">Ideas and Concepts</h5>
-                                <p>Designed</p>
-                               
+                    <div class=" card shadow home-icon-box-1">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
+                                    color="#ff2458" fill="none">
+                                    <path
+                                        d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M16 4C17.6568 4 19 5.34315 19 7C19 8.22309 18.268 9.27523 17.2183 9.7423"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M13.7143 14H10.2857C7.91876 14 5.99998 15.9188 5.99998 18.2857C5.99998 19.2325 6.76749 20 7.71426 20H16.2857C17.2325 20 18 19.2325 18 18.2857C18 15.9188 16.0812 14 13.7143 14Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M17.7143 13C20.0812 13 22 14.9188 22 17.2857C22 18.2325 21.2325 19 20.2857 19"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 4C6.34315 4 5 5.34315 5 7C5 8.22309 5.73193 9.27523 6.78168 9.7423"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M3.71429 19C2.76751 19 2 18.2325 2 17.2857C2 14.9188 3.91878 13 6.28571 13"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
-                        </div> --}}
+                            <p>Total Students</p>
+                            <h1 class="mb-2 text-center font-weight-bold">5K</h1>
+                        </div>
+                    </div>
+                    <div class=" card shadow home-icon-box-2">
+                        <div class="card-body d-flex align-items-center gap-2">
+                            <div class="icon icon-shape icon-shape-primary rounded-circle mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
+                                    color="#9013fe" fill="none">
+                                    <path
+                                        d="M2 8C2 9.34178 10.0949 13 11.9861 13C13.8772 13 21.9722 9.34178 21.9722 8C21.9722 6.65822 13.8772 3 11.9861 3C10.0949 3 2 6.65822 2 8Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M5.99414 11L6.23925 16.6299C6.24415 16.7426 6.25634 16.8555 6.28901 16.9635C6.38998 17.2973 6.57608 17.6006 6.86 17.8044C9.08146 19.3985 14.8901 19.3985 17.1115 17.8044C17.3956 17.6006 17.5816 17.2973 17.6826 16.9635C17.7152 16.8555 17.7274 16.7426 17.7324 16.6299L17.9774 11"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M20.4734 9.5V16.5M20.4734 16.5C19.6814 17.9463 19.3312 18.7212 18.9755 20C18.8983 20.455 18.9596 20.6843 19.2732 20.8879C19.4006 20.9706 19.5537 21 19.7055 21H21.2259C21.3876 21 21.5507 20.9663 21.6838 20.8745C21.9753 20.6735 22.0503 20.453 21.9713 20C21.6595 18.8126 21.2623 18.0008 20.4734 16.5Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <p>Students placed</p>
+                                <h2 class="mb-2 text-center font-weight-bold">8K+</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                    <img class="bshape_03" src="{{ asset('assets/frontend/default/images/bshape_03.png') }}"
+                        alt="">
+                    <img class="bshape_04" src="{{ asset('assets/frontend/default/images/bshape_04.png') }}"
+                        alt="">
+                    <img class="bshape_05" src="{{ asset('assets/frontend/default/images/bshape_05.png') }}"
+                        alt="">
                 </div>
             </div>
         </div>
@@ -269,6 +387,7 @@
             </div>
             <div class="swiper-button-next els-navigation-btn"></div>
             <div class="swiper-button-prev els-navigation-btn"></div>
+
         </div>
         <div class="swiper-pagination-wrapper mt-5">
             <div class="swiper-pagination"></div>
@@ -299,7 +418,8 @@
                             </span>
                             <div class="b-text">
                                 <h5 class="builder-editable" builder-identity="2">{{ get_phrase('150k +') }}</h5>
-                                <p class="builder-editable" builder-identity="3">{{ get_phrase('Top rated Courses') }}</p>
+                                <p class="builder-editable" builder-identity="3">{{ get_phrase('Top rated Courses') }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -622,8 +742,7 @@
                                     <div class="testimonial-des">
                                         <div class="user-info d-flex">
                                             <div class="ellipsis-line-2">
-                                                <h4><span class="builder-editable"
-                                                        builder-identity="8">No review</span>
+                                                <h4><span class="builder-editable" builder-identity="8">No review</span>
                                                 </h4>
                                             </div>
                                         </div>
