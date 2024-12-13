@@ -43,12 +43,12 @@
                             </thead>
                             <tbody>
                                 @foreach ($user_reviews as $key => $review)
-                                    @php
+                                    {{-- @php
                                         $userInfo = App\Models\User::where('id', $review->user_id)->first();
                                         if (!$userInfo) {
                                             continue;
                                         }
-                                    @endphp
+                                    @endphp --}}
                                     <tr>
                                         <th scope="row">
                                             <p class="row-number">{{ $key + 1 }}</p>
@@ -56,7 +56,7 @@
 
                                         <td>
                                             <div class="dAdmin_info_name min-w-150px">
-                                                <p>{{ $userInfo->name }}</p>
+                                                <p>{{ $review->user_name }}</p>
                                             </div>
                                         </td>
 

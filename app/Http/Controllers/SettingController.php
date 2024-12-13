@@ -789,14 +789,16 @@ class SettingController extends Controller
     //User Review Add 
     public function user_review_add()
     {
-        $page_data['userList'] = User::where('role', 'student')->get();
-        return view('admin.setting.user_review_create', $page_data);
+        // $page_data['userList'] = User::where('role', 'student')->get();
+        // return view('admin.setting.user_review_create', $page_data);
+
+        return view('admin.setting.user_review_create');
     }
     public function user_review_stor(Request $request)
     {
         $data = $request->all();
         $reviewAdd = new UserReview;
-        $reviewAdd['user_id'] = $data['user_id'];
+        $reviewAdd['user_name'] = $data['user_name'];
         $reviewAdd['rating'] = $data['rating'];
         $reviewAdd['review'] = $data['review'];
         $reviewAdd->save();
@@ -807,7 +809,7 @@ class SettingController extends Controller
     public function review_edit($id)
     {
         $page_data["review_data"] = UserReview::find($id);
-        $page_data['userList'] = User::where('role', 'student')->get();
+        // $page_data['userList'] = User::where('role', 'student')->get();
         return view("admin.setting.user_review_edit", $page_data);
     }
     public function review_update(Request $request, $id)

@@ -28,13 +28,9 @@
                         @csrf
 
                         <div class="fpb-7 mb-3">
-                            <label class="form-label ol-form-label" for="blog_category_id">{{ get_phrase('Select User') }}</label>
-                            <select class="form-control ol-form-control ol-select2" data-toggle="select2" name="user_id" id="blog_category_id" required>
-                                <option value="">{{ get_phrase('Select an user') }}</option>
-                                @foreach ($userList as $user)
-                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                                @endforeach
-                            </select>
+                            <label class="form-label ol-form-label" for="blog_category_id">{{ get_phrase('User Name') }}</label>
+                            <input type="text" class="form-control ol-form-control" name="user_name" required>
+                            </input>
                         </div>
                         <div class="fpb-7 mb-3">
                             <label class="form-label ol-form-label" for="blog_category_id">{{ get_phrase('Rating') }}</label>

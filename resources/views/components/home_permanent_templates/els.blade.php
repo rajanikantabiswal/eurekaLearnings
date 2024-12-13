@@ -805,13 +805,7 @@
                             </div>
                         @else
                             @foreach ($reviews as $review)
-                                @php
-                                    $userDetails = DB::table('users')
-                                        ->where('id', $review->user_id)
-                                        ->first();
-                                @endphp
-
-                                @if ($userDetails)
+                            
                                     <!-- Single User Opinion -->
                                     <div class="single-opinion">
                                         <div class="user-image">
@@ -825,14 +819,11 @@
                                                     <span class="builder-editable"
                                                         builder-identity="7">{{ $review->review }}</span>
                                                 </p>
-                                                <div class="user-info d-flex">
+                                                <div class="user-info d-flex gap-2">
                                                     <div class="ellipsis-line-2">
                                                         <h4><span class="builder-editable"
-                                                                builder-identity="8">{{ $userDetails->name }}</span>
+                                                                builder-identity="8">{{ $review->user_name }}</span>
                                                         </h4>
-                                                        <p><span class="builder-editable"
-                                                                builder-identity="9">{{ $userDetails->email }}</span>
-                                                        </p>
                                                     </div>
                                                     <div class="d-flex align-items-center gap-1">
                                                         @for ($i = 1; $i <= 5; $i++)
@@ -852,7 +843,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endif
                             @endforeach
                         @endif
                     </div>
