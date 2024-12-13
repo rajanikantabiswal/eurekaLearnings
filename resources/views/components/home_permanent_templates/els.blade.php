@@ -137,7 +137,8 @@
         .swiper-pagination-wrapper {
             position: relative;
         }
-        .swiper-pagination .swiper-pagination-bullet-active{
+
+        .swiper-pagination .swiper-pagination-bullet-active {
             background: #EC2426 !important;
         }
 
@@ -154,6 +155,8 @@
             margin-left: 40px;
         }
 
+
+
         .home-icon-box-2 {
             border-radius: 20px;
             display: flex;
@@ -164,13 +167,6 @@
             right: 0;
             padding: 5px;
             margin-right: 100px;
-        }
-
-        .bshape_05 {
-            position: absolute;
-            top: 20%;
-            right: 10%;
-            width: 70px;
         }
 
         .bshape_03 {
@@ -187,7 +183,37 @@
             width: 80px;
         }
 
-        .els-navigation-btn{
+        .bshape_05 {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 70px;
+        }
+
+        @media (max-width: 768px) {
+            .home-icon-box-1 {
+                border-radius: 20px;
+                top: 60%;
+                padding: 5px;
+                margin-left: 20px;
+            }
+
+            .home-icon-box-2 {
+                border-radius: 20px;
+                top: 90%;
+                padding: 5px;
+                margin-right: 20px;
+            }
+
+            .bshape_03,
+            .bshape_04,
+            .bshape_05 {
+                display: none;
+            }
+        }
+
+
+        .els-navigation-btn {
             position: absolute;
             background: #ec2426;
             border: none;
@@ -195,18 +221,46 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        .swiper-button-next.els-navigation-btn {   
-            right: 100px;
-            background-image: url('{{asset('assets/frontend/default/images/next-arrow.svg')}}');
+        @media (max-width: 768px) {
+            .home-icon-box-1 {
+                border-radius: 20px;
+                top: 60%;
+                padding: 5px;
+                margin-left: 20px;
+            }
+
+            .home-icon-box-2 {
+                border-radius: 20px;
+                top: 90%;
+                padding: 5px;
+                margin-right: 20px;
+            }
+
+            .bshape_03,
+            .bshape_04,
+            .bshape_05 {
+                display: none;
+            }
+            .els-navigation-btn{
+                display: none;
+            }
         }
+
+        .swiper-button-next.els-navigation-btn {
+            right: 100px;
+            background-image: url('{{ asset('assets/frontend/default/images/next-arrow.svg') }}');
+        }
+
         .swiper-button-prev.els-navigation-btn {
             left: 100px;
-            background-image: url('{{asset('assets/frontend/default/images/prev-arrow.svg')}}');  
+            background-image: url('{{ asset('assets/frontend/default/images/prev-arrow.svg') }}');
         }
-        .els-navigation-btn:hover{
+
+        .els-navigation-btn:hover {
             background-color: #ec2426BD;
         }
-        .els-navigation-btn::after{
+
+        .els-navigation-btn::after {
             content: '';
         }
 
@@ -261,7 +315,7 @@
                         </script>
 
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex gap-2">
                         <div class="d-flex text-lft">
                             <a href="{{ route('courses') }}"
                                 class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
@@ -893,11 +947,6 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-
             },
             loop: true,
             breakpoints: {
