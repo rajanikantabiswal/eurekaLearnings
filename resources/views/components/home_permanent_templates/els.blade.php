@@ -64,7 +64,7 @@
             background: url("{{ asset('assets/frontend/default/images/banner_bg-1.webp') }}");
             background-size: cover;
         }
-        
+
 
         .slider-wrapper {
             margin-top: -10%;
@@ -188,8 +188,36 @@
             right: 10%;
             width: 70px;
         }
-        .els-section1 .card h1{
+
+        .els-section1 .card h1 {
             font-weight: 700 !important;
+        }
+
+        section.ec-council {
+            position: relative;
+            background: url("{{ asset('assets/frontend/default/images/ec-council-batch.webp') }}");
+            background-size: content;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        section.ec-council::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            /* Adjust the color and opacity */
+            z-index: 1;
+            pointer-events: none;
+            /* Ensures that it doesn’t block interactions */
+        }
+
+        section.ec-council>* {
+            position: relative;
+            z-index: 2;
         }
 
         @media (max-width: 768px) {
@@ -223,6 +251,7 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
         @media (max-width: 768px) {
             .home-icon-box-1 {
                 border-radius: 20px;
@@ -243,7 +272,8 @@
             .bshape_05 {
                 display: none;
             }
-            .els-navigation-btn{
+
+            .els-navigation-btn {
                 display: none;
             }
         }
@@ -414,6 +444,22 @@
         </div>
     </section>
     <!-- Banner Area End -->
+
+    <section class="section-padding ec-council">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="w-50">
+                        <h1 class="title-5 fs-32px">The Only center in Odisha accredited by the <span class="gradient shadow-none color builder-editable">EC-Council</span></h1>
+                    </div>
+
+                </div>
+                <div class="col-lg-5">
+                    <img src="{{ asset('assets/frontend/default/images/points.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Category Area Start -->
     <section class="section-padding">
@@ -806,44 +852,43 @@
                             </div>
                         @else
                             @foreach ($reviews as $review)
-                            
-                                    <!-- Single User Opinion -->
-                                    <div class="single-opinion">
-                                        <div class="user-image">
-                                            <img class="builder-editable" builder-identity="6"
-                                                src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-border">
-                                            <div class="testimonial-des">
-                                                <p class="description overlay-content overlay-content-max-h-150">
-                                                    <span class="builder-editable"
-                                                        builder-identity="7">{{ $review->review }}</span>
-                                                </p>
-                                                <div class="user-info d-flex gap-2">
-                                                    <div class="ellipsis-line-2">
-                                                        <h4><span class="builder-editable"
-                                                                builder-identity="8">{{ $review->user_name }}</span>
-                                                        </h4>
-                                                    </div>
-                                                    <div class="d-flex align-items-center gap-1">
-                                                        @for ($i = 1; $i <= 5; $i++)
-                                                            @if ($i <= $review->rating)
-                                                                <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
-                                                                    alt="">
-                                                            @else
-                                                                <img src="{{ asset('assets/frontend/default/image/star.svg') }}"
-                                                                    alt="">
-                                                            @endif
-                                                        @endfor
-                                                        <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">
-                                                            ({{ $review->rating }})
-                                                        </h6>
-                                                    </div>
+                                <!-- Single User Opinion -->
+                                <div class="single-opinion">
+                                    <div class="user-image">
+                                        <img class="builder-editable" builder-identity="6"
+                                            src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
+                                            alt="">
+                                    </div>
+                                    <div class="testimonial-border">
+                                        <div class="testimonial-des">
+                                            <p class="description overlay-content overlay-content-max-h-150">
+                                                <span class="builder-editable"
+                                                    builder-identity="7">{{ $review->review }}</span>
+                                            </p>
+                                            <div class="user-info d-flex gap-2">
+                                                <div class="ellipsis-line-2">
+                                                    <h4><span class="builder-editable"
+                                                            builder-identity="8">{{ $review->user_name }}</span>
+                                                    </h4>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    @for ($i = 1; $i <= 5; $i++)
+                                                        @if ($i <= $review->rating)
+                                                            <img src="{{ asset('assets/frontend/default/image/star-yellow-14.svg') }}"
+                                                                alt="">
+                                                        @else
+                                                            <img src="{{ asset('assets/frontend/default/image/star.svg') }}"
+                                                                alt="">
+                                                        @endif
+                                                    @endfor
+                                                    <h6 class="title-5 ms-2 fs-18px lh-37px fw-semibold">
+                                                        ({{ $review->rating }})
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             @endforeach
                         @endif
                     </div>
