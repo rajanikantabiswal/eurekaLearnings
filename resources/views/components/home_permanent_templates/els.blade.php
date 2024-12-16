@@ -199,6 +199,7 @@
             background-size: content;
             background-repeat: no-repeat;
             background-position: center;
+            border-bottom: 1px solid #EC2426;
         }
 
         section.ec-council::before {
@@ -208,7 +209,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.8);
             /* Adjust the color and opacity */
             z-index: 1;
             pointer-events: none;
@@ -279,12 +280,10 @@
         }
 
         .swiper-button-next.els-navigation-btn {
-            right: 100px;
             background-image: url('{{ asset('assets/frontend/default/images/next-arrow.svg') }}');
         }
 
         .swiper-button-prev.els-navigation-btn {
-            left: 100px;
             background-image: url('{{ asset('assets/frontend/default/images/prev-arrow.svg') }}');
         }
 
@@ -463,8 +462,18 @@
 
     <!-- Category Area Start -->
     <section class="section-padding">
-        <div class="category-wrapper">
-            <div class="container swiper categorySwiper">
+         <!-- Section title -->
+         <div class="row">
+            <div class="col-md-12">
+                <div class="home1-section-title">
+                    <h1 class="title mb-20 fw-500">{{ get_phrase('Browse by Categories') }}</h1>
+                    <p class="info">
+                        {{ get_phrase("Those course highlights a handpicked course with exceptional content or exclusive offerings.") }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="category-wrapper container">
+            <div class="w-100 swiper categorySwiper">
                 <div class="swiper-wrapper">
                     @foreach (App\Models\Category::where('parent_id', 0)->get() as $category)
                         <div class="swiper-slide">
