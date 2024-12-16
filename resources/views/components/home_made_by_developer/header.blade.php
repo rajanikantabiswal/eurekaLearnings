@@ -93,10 +93,14 @@
                                     </div>
                                 </ul>
                             </li>
-                            <li class="pe-2 ps-5"><a href="{{ route('bootcamps') }}"
+                            {{-- <li class="pe-2 ps-5"><a href="{{ route('bootcamps') }}"
                                     class="@if ($current_route == 'bootcamps' || $current_route == 'bootcamp.details') active @endif">{{ get_phrase('Bootcamp') }}</a>
-                            </li>
+                            </li> --}}
                             {{-- <li><a href="{{ route('team.packages') }}" class="@if ($current_route == 'team.packages' || $current_route == 'team.package.details') active @endif">{{ get_phrase('Team Training') }}</a></li> --}}
+
+                            <li class="pe-2 ps-5"><a href="{{ route('certifications.index') }}"
+                                class="@if ($current_route == 'certifications.index' || $current_route == 'certifications.show') active @endif">{{ get_phrase('Certifications') }}</a>
+                        </li>
                         </ul>
                     </div>
                 </div>

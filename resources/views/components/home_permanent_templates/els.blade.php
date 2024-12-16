@@ -63,8 +63,6 @@
             padding-top: 100px;
             background: url("{{ asset('assets/frontend/default/images/banner_bg-1.webp') }}");
             background-size: cover;
-            margin-bottom: 50px;
-            min-height: 100vh;
         }
 
         .slider-wrapper {
@@ -271,9 +269,8 @@
 @endpush
 @section('content')
     <!-- Banner Area Start -->
-
     <section class="els-section1">
-        <div class="container ">
+        <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-6 order-sm-2 order-lg-1 d-flex flex-column align-items-center align-items-sm-start justify-content-center aos-init aos-animate"
                     data-aos="zoom-out">
@@ -415,10 +412,10 @@
     <!-- Banner Area End -->
 
     <!-- Category Area Start -->
-    <section class="mb-100">
+    <section class="section-padding">
         <div class="category-wrapper">
-            <div class="container  mb-0 mb-sm-4 swiper categorySwiper">
-                <div class="swiper-wrapper mb-4 mb-sm-0">
+            <div class="container swiper categorySwiper">
+                <div class="swiper-wrapper">
                     @foreach (App\Models\Category::where('parent_id', 0)->get() as $category)
                         <div class="swiper-slide">
                             <a class="w-100" href="{{ route('courses', $category->slug) }}">
@@ -453,7 +450,7 @@
     <!-- Category Area End -->
 
     <!-- About Area Start -->
-    <section class="testimonials-wrapper section-padding pb-5">
+    <section class="testimonials-wrapper section-padding">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -526,7 +523,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="{{ route('about.us') }}" class="eBtn gradient mt-50 mb-5 builder-editable"
+                        <a href="{{ route('about.us') }}" class="btn btn-danger-1 gradient mt-50 builder-editable"
                             builder-identity="11">{{ get_phrase('More about us') }} <i
                                 class="fa-solid fa-arrow-right-long ms-2"></i></a>
                     </div>
@@ -624,7 +621,7 @@
                     </div>
                 @endforeach
             </div>
-            <div class="row mb-100px">
+            <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-center">
                         <a href="{{ route('courses') }}" class="btn btn-danger-1">{{ get_phrase('See More') }}</a>
@@ -699,7 +696,7 @@
     <!-- Event Area End -->
 
     <!-- FAQ Area Start -->
-    <section class="">
+    <section class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -712,7 +709,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-28px align-items-center mb-100px">
+            <div class="row g-28px align-items-center">
                 {{-- <div class="col-lg-5">
                     <div class="tuition-banner">
                         @if (isset($storImage->faq_image))
@@ -760,7 +757,7 @@
     <!-- FAQ Area End -->
 
     <!-- Testimonial Area Start -->
-    <section class="testimonials-wrapper section-padding pb-5 mb-100 px-20">
+    <section class="testimonials-wrapper section-padding px-20">
         <span class="elips left-elips"><img class="builder-editable" builder-identity="1"
                 src="{{ asset('assets/page-builder/block-image/Ellipse 8.png') }}" alt="..."></span>
         <span class="elips right-elips"><img class="builder-editable" builder-identity="2"
@@ -851,7 +848,6 @@
         </div>
     </section>
     <!-- Testimonial Area End -->
-
     <script>
         $('.testimonials-wrapper .user-slider').owlCarousel({
             loop: false,
@@ -873,15 +869,12 @@
             }
         });
     </script>
-
-
-
     <!-- Testimonial Area End -->
 
 
     <!-- Blog Area Start -->
     @if (get_frontend_settings('blog_visibility_on_the_home_page'))
-        <section>
+        <section class="section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -894,7 +887,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-20px mb-100px">
+                <div class="row g-20px">
                     @foreach ($blogs as $key => $blog)
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <a href="{{ route('blog.details', $blog->slug) }}" class="blog-post1-link">

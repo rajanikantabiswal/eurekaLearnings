@@ -1,16 +1,17 @@
 <?php
 
-use App\Http\Controllers\frontend\AboutController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\BlogController;
-use App\Http\Controllers\frontend\BootcampController;
-use App\Http\Controllers\frontend\ContactController;
-use App\Http\Controllers\frontend\CourseController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\CourseController;
+use App\Http\Controllers\frontend\ContactController;
+use App\Http\Controllers\frontend\BootcampController;
 use App\Http\Controllers\frontend\InstructorController;
 use App\Http\Controllers\frontend\NewsletterController;
 use App\Http\Controllers\frontend\TeamTrainingController;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\frontend\CertificationController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
@@ -92,3 +93,6 @@ Route::controller(TeamTrainingController::class)->group(function () {
     Route::get('team-packages/{course_category?}', 'index')->name('team.packages');
     Route::get('team-package/{slug}', 'show')->name('team.package.details');
 });
+
+Route::resource('certifications', CertificationController::class);
+

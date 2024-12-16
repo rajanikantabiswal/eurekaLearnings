@@ -1,35 +1,36 @@
 <?php
 
-use App\Http\Controllers\Admin\BootcampCategoryController;
-use App\Http\Controllers\Admin\BootcampController;
-use App\Http\Controllers\Admin\BootcampLiveClassController;
-use App\Http\Controllers\Admin\BootcampModuleController;
-use App\Http\Controllers\Admin\BootcampResourceController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\MessageController;
-use App\Http\Controllers\Admin\OfflinePaymentController;
-use App\Http\Controllers\Admin\OpenAiController;
-use App\Http\Controllers\Admin\PageBuilderController;
-use App\Http\Controllers\Admin\QuestionController;
-use App\Http\Controllers\Admin\QuizController;
-use App\Http\Controllers\Admin\TeamTrainingController;
-use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\Updater;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SeoController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\CourseController;
-use App\Http\Controllers\CurriculumController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\frontend\LanguageController;
-use App\Http\Controllers\InvoiceController;
-use App\Http\Controllers\LiveClassController;
-use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ReportController;
-use App\Http\Controllers\SeoController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\SettingController;
-use App\Http\Controllers\Updater;
-use App\Http\Controllers\UsersController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LiveClassController;
+use App\Http\Controllers\Admin\QuizController;
+use App\Http\Controllers\CurriculumController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\Admin\OpenAiController;
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\BootcampController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Admin\PageBuilderController;
+use App\Http\Controllers\frontend\LanguageController;
+use App\Http\Controllers\Admin\TeamTrainingController;
+use App\Http\Controllers\Admin\BootcampModuleController;
+use App\Http\Controllers\Admin\OfflinePaymentController;
+use App\Http\Controllers\Admin\BootcampCategoryController;
+use App\Http\Controllers\Admin\BootcampResourceController;
+use App\Http\Controllers\Admin\CertificationController;
+use App\Http\Controllers\Admin\BootcampLiveClassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -426,4 +427,15 @@ Route::name('admin.')->prefix('admin')->middleware('admin')->group(function () {
     });
 
     Route::get('select-language/{language}', [LanguageController::class, 'select_lng'])->name('select.language');
+
+     // bootcamp
+     Route::controller(CertificationController::class)->group(function () {
+        Route::get('certifications/{type?}', 'index')->name('certifications');
+        Route::get('certification/create', 'create')->name('certification.create');
+        Route::get('certification/edit/{id}', 'edit')->name('certification.edit');
+        Route::post('certification/store', 'store')->name('certification.store');
+        Route::get('certification/delete/{id}', 'delete')->name('certification.delete');
+        Route::post('certification/update/{id}', 'update')->name('certification.update');
+    });
+
 });
