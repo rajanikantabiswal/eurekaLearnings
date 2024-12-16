@@ -64,6 +64,7 @@
             background: url("{{ asset('assets/frontend/default/images/banner_bg-1.webp') }}");
             background-size: cover;
         }
+        
 
         .slider-wrapper {
             margin-top: -10%;
@@ -186,6 +187,9 @@
             top: 20%;
             right: 10%;
             width: 70px;
+        }
+        .els-section1 .card h1{
+            font-weight: 700 !important;
         }
 
         @media (max-width: 768px) {
@@ -342,7 +346,7 @@
                     <img src="{{ asset('assets/frontend/default/images/banner_img.png') }}" class="img-fluid animated"
                         alt="">
 
-                    <div class=" card shadow home-icon-box-1">
+                    <div class="card shadow home-icon-box-1">
                         <div class="card-body d-flex flex-column align-items-center">
                             <div class="icon icon-shape icon-shape-primary rounded-circle mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
@@ -373,7 +377,7 @@
                             <h1 class="mb-2 text-center font-weight-bold">5K</h1>
                         </div>
                     </div>
-                    <div class=" card shadow home-icon-box-2">
+                    <div class="card shadow home-icon-box-2">
                         <div class="card-body d-flex align-items-center gap-2">
                             <div class="icon icon-shape icon-shape-primary rounded-circle mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
@@ -394,7 +398,7 @@
                             </div>
                             <div class="d-flex flex-column align-items-start">
                                 <p>Students placed</p>
-                                <h2 class="mb-2 text-center font-weight-bold">8K+</h2>
+                                <h1 class="mb-2 text-center font-weight-bold">8K+</h1>
                             </div>
 
                         </div>
