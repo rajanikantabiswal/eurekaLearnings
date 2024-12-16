@@ -220,6 +220,9 @@
             position: relative;
             z-index: 2;
         }
+        .ec-council .title{
+            width: 50%;
+        }
 
         @media (max-width: 768px) {
             .home-icon-box-1 {
@@ -241,6 +244,9 @@
             .bshape_05 {
                 display: none;
             }
+            .ec-council .title{
+            width: 100%;
+        }
         }
 
 
@@ -448,7 +454,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <div class="w-50">
+                    <div class="title">
                         <h1 class="title-5 fs-32px">The Only center in Odisha accredited by the <span class="gradient shadow-none color builder-editable">EC-Council</span></h1>
                     </div>
 
