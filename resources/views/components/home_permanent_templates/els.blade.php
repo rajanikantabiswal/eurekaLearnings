@@ -345,7 +345,7 @@
                         </script>
 
                     </div>
-                    <div class="d-flex gap-2">
+                    <div class="d-flex flex-column flex-sm-row gap-4">
                         <div class="d-flex text-lft">
                             <a href="{{ route('courses') }}"
                                 class="btn btn-danger-1">{{ get_phrase('Get Started Now') }}</a>
@@ -514,7 +514,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
                     <div class="skill-image position-relative">
-                        <img class="builder-editable" builder-identity="1"
+                        <img class="object-fit-contain builder-editable" builder-identity="1"
                             src="{{ asset('assets/frontend/default/image/skill-image.png') }}" alt="...">
                         <div class="over-text">
                             <span>
