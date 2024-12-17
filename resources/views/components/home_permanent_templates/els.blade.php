@@ -415,7 +415,7 @@
                         <span
                             class="highlight-title d-inline-flex">{{ get_frontend_settings('typing_effect_title') }}</span>
                     </h1>
-                    <h1 class="title-5 lh-normal mb-20px">
+                    <h1 class="title-5 lh-normal mb-20px overflow-auto text-nowrap">
                         <span id="typed-output" class="typed-output highlight-title d-inline-flex"></span>
                     </h1>
                     <p class="subtitle-5 fs-15px lh-24px text-black text-center text-sm-start mb-30px">
