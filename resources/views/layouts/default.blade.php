@@ -28,8 +28,10 @@
 
     <!-- FlatIcons Css -->
     <link rel="stylesheet" href="{{ asset('assets/global/icons/uicons-bold-rounded/css/uicons-bold-rounded.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/global/icons/uicons-regular-rounded/css/uicons-regular-rounded.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/global/icons/uicons-solid-rounded/css/uicons-solid-rounded.css') }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/global/icons/uicons-regular-rounded/css/uicons-regular-rounded.css') }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/global/icons/uicons-solid-rounded/css/uicons-solid-rounded.css') }}" />
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/custome-front/custom-fronts.css') }}">
@@ -45,15 +47,18 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/responsive.css') }}">
 
     <!-- Yaireo Tagify -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/global/tagify-master/dist/tagify.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/global/tagify-master/dist/tagify.css') }}"
+        rel="stylesheet" type="text/css" />
 
     <!-- Custom Style -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/custom_style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/new_responsive.css') }}">
-
     <!-- Jquery Js -->
     <script src="{{ asset('assets/frontend/default/js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/default/js/tagcanvas.min.js') }}"></script>
+
     @stack('css')
+
 
 </head>
 
@@ -107,7 +112,7 @@
     <script src="{{ asset('assets/frontend/default/js/jquery.nice-select.min.js') }}"></script>
 
     {{-- New Js Link  --}}
-  
+
     <script src="{{ asset('assets/frontend/default/vendors/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/default/vendors/counterup/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/default/vendors/counterup/jquery.waypoints.js') }}"></script>
@@ -136,7 +141,7 @@
     <!-- Main Js -->
     <script src="{{ asset('assets/frontend/default/js/script.js') }}"></script>
 
-    @if(get_frontend_settings('cookie_status'))
+    @if (get_frontend_settings('cookie_status'))
         @include('frontend.default.cookie')
     @endif
 

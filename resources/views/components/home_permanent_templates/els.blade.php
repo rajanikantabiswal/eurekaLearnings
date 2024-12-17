@@ -346,27 +346,27 @@
 
         .marquee__group img {
             /* max-width: clamp(10rem, 1rem + 28vmin, 20rem);
-            aspect-ratio: 1; */
+                        aspect-ratio: 1; */
             object-fit: content;
             border-radius: 1rem;
             width: 200px;
         }
 
         /* .marquee__group p {
-            background-image: linear-gradient(75deg,
-                    hsl(240deg 70% 49%) 0%,
-                    hsl(253deg 70% 49%) 11%,
-                    hsl(267deg 70% 49%) 22%,
-                    hsl(280deg 71% 48%) 33%,
-                    hsl(293deg 71% 48%) 44%,
-                    hsl(307deg 71% 48%) 56%,
-                    hsl(320deg 71% 48%) 67%,
-                    hsl(333deg 72% 48%) 78%,
-                    hsl(347deg 72% 48%) 89%,
-                    hsl(0deg 73% 47%) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        } */
+                        background-image: linear-gradient(75deg,
+                                hsl(240deg 70% 49%) 0%,
+                                hsl(253deg 70% 49%) 11%,
+                                hsl(267deg 70% 49%) 22%,
+                                hsl(280deg 71% 48%) 33%,
+                                hsl(293deg 71% 48%) 44%,
+                                hsl(307deg 71% 48%) 56%,
+                                hsl(320deg 71% 48%) 67%,
+                                hsl(333deg 72% 48%) 78%,
+                                hsl(347deg 72% 48%) 89%,
+                                hsl(0deg 73% 47%) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    } */
 
         .marquee--borders {
             border-block: 3px solid #ec2426;
@@ -537,6 +537,7 @@
     </section>
     <!-- Banner Area End -->
 
+    <!-- Alliance Area Start -->
     <section class="py-4">
         <div class="marquee-box">
             <div class="marquee">
@@ -545,12 +546,9 @@
                         alt=''>
                     <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
                         alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
-                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png' alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png' alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png' alt=''>
                 </div>
 
                 <div aria-hidden="true" class="marquee__group">
@@ -558,12 +556,9 @@
                         alt=''>
                     <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
                         alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
-                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png' alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png' alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png' alt=''>
                 </div>
             </div>
 
@@ -610,6 +605,7 @@
             </div> --}}
         </div>
     </section>
+    <!-- Alliance Area Start -->
 
 
     <section class="section-padding ec-council">
@@ -683,7 +679,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
-                    <div class="skill-image position-relative">
+                    {{-- <div class="skill-image position-relative">
                         <img class="object-fit-contain builder-editable" builder-identity="1"
                             src="{{ asset('assets/frontend/default/image/skill-image.png') }}" alt="...">
                         <div class="over-text">
@@ -702,7 +698,202 @@
                                 </p>
                             </div>
                         </div>
+                    </div> --}}
+
+                    <div id="myCanvasContainer">
+                        <canvas width="500" height="500" id="myCanvas">
+                            <p>
+                                Anything in here will be replaced on browsers that support the canvas
+                                element
+                            </p>
+                        </canvas>
                     </div>
+                    <div id="tags">
+                        <ul>
+                            <li>
+                                <a href="https://laravel.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel"
+                                         width="40"> Laravel
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.php.net" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/php-1.svg" alt="PHP"
+                                         width="40"> PHP
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.javascript.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript"
+                                         width="40"> JavaScript
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://reactjs.org" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React.js"
+                                         width="40"> React.js
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS"
+                                         width="40"> Tailwind CSS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.mysql.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" alt="MySQL"
+                                         width="40"> MySQL
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://nodejs.org" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js"
+                                         width="40"> Node.js
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://angular.io" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" alt="Angular"
+                                         width="40"> Angular
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aws.amazon.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"
+                                         width="40"> AWS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://getbootstrap.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap"
+                                         width="40"> Bootstrap
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://jquery.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/jquery-4.svg" alt="jQuery"
+                                         width="40"> jQuery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5"
+                                         width="40"> HTML5
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3"
+                                         width="40"> CSS3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub"
+                                         width="40"> GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://git-scm.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git"
+                                         width="40"> Git
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://laravel.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel"
+                                         width="40"> Laravel
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.php.net" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/php-1.svg" alt="PHP"
+                                         width="40"> PHP
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.javascript.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript"
+                                         width="40"> JavaScript
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://reactjs.org" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React.js"
+                                         width="40"> React.js
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS"
+                                         width="40"> Tailwind CSS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.mysql.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" alt="MySQL"
+                                         width="40"> MySQL
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://nodejs.org" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js"
+                                         width="40"> Node.js
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://angular.io" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" alt="Angular"
+                                         width="40"> Angular
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aws.amazon.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"
+                                         width="40"> AWS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://getbootstrap.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap"
+                                         width="40"> Bootstrap
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://jquery.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/jquery-4.svg" alt="jQuery"
+                                         width="40"> jQuery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5"
+                                         width="40"> HTML5
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3"
+                                         width="40"> CSS3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub"
+                                         width="40"> GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://git-scm.com" target="_blank">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git"
+                                         width="40"> Git
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
                 </div>
                 <div class="col-lg-7 col-md-6">
                     <div class="skil-content">
@@ -1143,10 +1334,37 @@
     @endif
     <!-- Blog Area End -->
 
-    
+
 @endsection
 
 @push('js')
+    <script>
+        window.onload = function() {
+            try {
+                TagCanvas.Start('myCanvas', 'tags', {
+                    textColour: '#ff0000',
+                    outlineColour: '#ff00ff',
+                    reverse: true,
+                    depth: 0.8,
+                    maxSpeed: 0.05
+                });
+            } catch (e) {
+                // something went wrong, hide the canvas container
+                document.getElementById('myCanvasContainer').style.display = 'none';
+            }
+        };
+        // $(function() {
+
+        //     $options = {
+        //         textColour: '#ff0000',
+        //         outlineColour: '#ff00ff',
+        //         reverse: true,
+        //         depth: 0.8,
+        //         maxSpeed: 0.05
+        //     };
+        //     $("#myCanvas").tagcanvas($options, "tags");
+        // });
+    </script>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".categorySwiper", {
