@@ -1510,7 +1510,7 @@
                     initial: [0.8,-0.3],
                     pinchZoom: false,
                     wheelZoom: false,
-                    dragControl: true,
+                    dragControl: false,
                     decel: 0.95,
                     noSelect: true
                 });
