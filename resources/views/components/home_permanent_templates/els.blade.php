@@ -1302,7 +1302,7 @@
                     initial: [0.8, -0.3],
                     pinchZoom: false,
                     wheelZoom: false,
-                    dragControl: false,
+                    dragControl: true,
                     decel: 0.95,
                     noSelect: true
                 });
