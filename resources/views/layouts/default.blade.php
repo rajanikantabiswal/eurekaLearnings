@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/new_responsive.css') }}">
     <!-- Jquery Js -->
     <script src="{{ asset('assets/frontend/default/js/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('assets/frontend/default/js/tagcanvas.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/default/js/jquery.tagcanvas.js') }}"></script>
 
     @stack('css')
 
