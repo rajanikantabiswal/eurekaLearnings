@@ -400,7 +400,7 @@
     <section class="els-section1">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-6 order-sm-2 order-lg-1 d-flex flex-column align-items-center align-items-sm-start justify-content-center aos-init aos-animate"
+                <div class="col-lg-6 order-sm-2 order-lg-1 d-flex mb-50 flex-column align-items-center align-items-sm-start justify-content-center aos-init aos-animate"
                     data-aos="zoom-out">
                     <span class="short-title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
                             height="24" color="red" fill="none" class="pe-2">
@@ -1068,6 +1068,34 @@
     </section> --}}
     <!-- Event Area End -->
 
+    <section class="testimonials-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <span class="title-head builder-editable" builder-identity="1">{{get_phrase('Categories')}}</span>
+                        <h2 class="title builder-editable" builder-identity="2">{{get_phrase('Explore Top Courses Caterories')}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                @foreach (App\Models\Category::where('parent_id', 0)->take(32)->get() as $category)
+                    <div class="col-md-4 col-sm-6 mb-30">
+                        <a href="{{ route('courses', $category->slug) }}" class="single-category">
+                            <div class="single-category-logo">
+                                <img src="{{ get_image($category->category_logo) }}" alt="">
+                            </div>
+                            <div class="single-category-name">
+                                <h4>{{ $category->title }}</h4>
+                                <p>{{ count_category_courses($category->id) }} {{get_phrase('courses')}}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Area Start -->
     <section class="section-padding">
         <div class="container">
@@ -1243,6 +1271,8 @@
     </script>
     <!-- Testimonial Area End -->
 
+   
+
 
     <!-- Blog Area Start -->
     @if (get_frontend_settings('blog_visibility_on_the_home_page'))
@@ -1298,7 +1328,7 @@
                     textColour: '#ff0000',
                     reverse: true,
                     depth: 0.8,
-                    maxSpeed: 0.03,
+                    maxSpeed: 0.02,
                     initial: [0.8, -0.3],
                     pinchZoom: false,
                     wheelZoom: false,
