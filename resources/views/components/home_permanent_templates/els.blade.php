@@ -220,9 +220,11 @@
             position: relative;
             z-index: 2;
         }
-        .ec-council .title{
+
+        .ec-council .title {
             width: 50%;
         }
+
 
         @media (max-width: 768px) {
             .home-icon-box-1 {
@@ -244,9 +246,10 @@
             .bshape_05 {
                 display: none;
             }
-            .ec-council .title{
-            width: 100%;
-        }
+
+            .ec-council .title {
+                width: 100%;
+            }
         }
 
 
@@ -299,6 +302,90 @@
 
         .els-navigation-btn::after {
             content: '';
+        }
+
+        .marquee-box {
+            --space: 2rem;
+
+            display: grid;
+            align-content: center;
+            overflow: hidden;
+            gap: var(--space);
+            width: 100%;
+            font-family: "Corben", system-ui, sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .marquee {
+            --duration: 10s;
+            --gap: var(--space);
+
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: var(--gap);
+
+        }
+
+        .marquee__group {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: var(--gap);
+            min-width: 100%;
+            animation: scroll var(--duration) linear infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .marquee__group {
+                animation-play-state: paused;
+            }
+        }
+
+        .marquee__group img {
+            /* max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+            aspect-ratio: 1; */
+            object-fit: content;
+            border-radius: 1rem;
+            width: 200px;
+        }
+
+        /* .marquee__group p {
+            background-image: linear-gradient(75deg,
+                    hsl(240deg 70% 49%) 0%,
+                    hsl(253deg 70% 49%) 11%,
+                    hsl(267deg 70% 49%) 22%,
+                    hsl(280deg 71% 48%) 33%,
+                    hsl(293deg 71% 48%) 44%,
+                    hsl(307deg 71% 48%) 56%,
+                    hsl(320deg 71% 48%) 67%,
+                    hsl(333deg 72% 48%) 78%,
+                    hsl(347deg 72% 48%) 89%,
+                    hsl(0deg 73% 47%) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        } */
+
+        .marquee--borders {
+            border-block: 3px solid #ec2426;
+            padding-block: 0.75rem;
+        }
+
+        .marquee--reverse .marquee__group {
+            animation-delay: calc(var(--duration) / -2);
+            animation-direction: reverse;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-100% - var(--gap)));
+            }
         }
 
 
@@ -450,12 +537,88 @@
     </section>
     <!-- Banner Area End -->
 
+    <section class="py-4">
+        <div class="marquee-box">
+            <div class="marquee">
+                <div class="marquee__group">
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
+                        alt=''>
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
+                        alt=''>
+                </div>
+            </div>
+
+            <div class="marquee marquee--borders" style="--duration: 100s">
+                <div class="marquee__group">
+                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
+                    <p class="gradient color shadow-none" aria-hidden="true">ASSOCIATES & STRATEGIC ALLIANCES</p>
+                    <p class="gradient color shadow-none" aria-hidden="true">ASSOCIATES & STRATEGIC ALLIANCES</p>
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
+                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
+                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
+                </div>
+            </div>
+
+            {{-- <div class="marquee marquee--reverse">
+                <div class="marquee__group">
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
+                        alt=''>
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
+                        alt=''>
+                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
+                        alt=''>
+                </div>
+            </div> --}}
+        </div>
+    </section>
+
+
     <section class="section-padding ec-council">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-7">
+                <div class="col-lg-7 mb-4 mb-sm-0">
                     <div class="title">
-                        <h1 class="title-5 fs-32px">The Only center in Odisha accredited by the <span class="gradient shadow-none color builder-editable">EC-Council</span></h1>
+                        <h1 class="title-5 fs-32px">The Only center in Odisha accredited by the <span
+                                class="gradient shadow-none color builder-editable">EC-Council</span></h1>
                     </div>
 
                 </div>
@@ -468,13 +631,14 @@
 
     <!-- Category Area Start -->
     <section class="section-padding">
-         <!-- Section title -->
-         <div class="row">
+        <!-- Section title -->
+        <div class="row">
             <div class="col-md-12">
                 <div class="home1-section-title">
                     <h1 class="title mb-20 fw-500">{{ get_phrase('Browse by Categories') }}</h1>
                     <p class="info">
-                        {{ get_phrase("Those course highlights a handpicked course with exceptional content or exclusive offerings.") }}</p>
+                        {{ get_phrase('Those course highlights a handpicked course with exceptional content or exclusive offerings.') }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -979,6 +1143,7 @@
     @endif
     <!-- Blog Area End -->
 
+    
 @endsection
 
 @push('js')
