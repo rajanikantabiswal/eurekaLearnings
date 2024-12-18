@@ -765,14 +765,23 @@
       }
       return xy;
     }
+    // function MouseOut(e) {
+    //   var cv = e.target || e.fromElement.parentNode, tc = TagCanvas.tc[cv.id];
+    //   if(tc) {
+    //    tc.mx = tc.my = -1;
+    //    tc.UnFreeze();
+    //    tc.EndDrag();
+    //   }
+    // }
     function MouseOut(e) {
       var cv = e.target || e.fromElement.parentNode, tc = TagCanvas.tc[cv.id];
-      if(tc) {
-       tc.mx = tc.my = -1;
-       tc.UnFreeze();
-       tc.EndDrag();
+      if (tc) {
+          tc.mx = tc.my = 0; // Set mouse positions to the center or default
+          tc.Freeze();
+          tc.BeginDrag();
       }
-    }
+  }
+  
     function MouseMove(e) {
       var i, t = TagCanvas, tc, p, tg = EventToCanvasId(e);
       for(i in t.tc) {

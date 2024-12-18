@@ -201,6 +201,11 @@
             background-position: center;
             border-bottom: 1px solid #EC2426;
         }
+        @media (max-width: 768px){
+            section.ec-council{
+                background: none;
+            }
+        }
 
         section.ec-council::before {
             content: "";
@@ -307,7 +312,7 @@
 
 
         .marquee {
-              overflow: hidden;
+            overflow: hidden;
         }
 
         .marquee-content {
@@ -322,6 +327,7 @@
             /*   flex: 0 0 20vw; */
             /*   margin: 0 2vw; */
         }
+
 
         .marquee-item img {
             display: block;
@@ -345,6 +351,24 @@
             font-weight: 800 !important;
             color: rgb(72, 72, 72);
         }
+
+        @media (max-width: 768px) {
+            .marquee-item {
+                flex: 0 0 30vw;
+                margin: 0 5vw;
+            }
+
+            section.alliance h1 {
+                font-size: 16px !important;
+                font-weight: 700 !important;
+                color: rgb(72, 72, 72);
+                margin-bottom: 5px;
+            }
+        }
+        .alliance h1{
+            width: 60%;
+        }
+
 
         /* End main header */
     </style>
@@ -497,81 +521,83 @@
     <section class="py-4 alliance">
         <div class="row">
             <div class="col-sm-3 d-flex align-items-center justify-content-center text-center text-black">
-                <h1>ASSOCIATES <br>&<br> STRATEGIC ALLIANCES
+                <h1>ASSOCIATES & STRATEGIC ALLIANCES
                 </h1>
             </div>
             <div class="col-sm-9 marquee">
                 <div class="marquee-content">
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/alliance/eccouncil.webp') }}" alt="EC-Council">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/eccouncil.webp') }}"
+                            alt="EC-Council">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/gem.webp') }}" alt="GEM">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/mit.webp') }}" alt="MIT">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/nasscom.webp') }}" alt="NASSCOM">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/niit.webp') }}" alt="NIIT">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/sanako.webp') }}" alt="SANAKO">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/startupindia.webp') }}"
                             alt="STARTUPINDIA">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/timespro.webp') }}" alt="TIMES-PRO">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/upgrad.webp') }}" alt="UPGRAD">
                     </div>
-    
+
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/alliance/eccouncil.webp') }}" alt="EC-Council">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/eccouncil.webp') }}"
+                            alt="EC-Council">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/gem.webp') }}" alt="GEM">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/mit.webp') }}" alt="MIT">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/nasscom.webp') }}" alt="NASSCOM">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/niit.webp') }}" alt="NIIT">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/sanako.webp') }}" alt="SANAKO">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/startupindia.webp') }}"
                             alt="STARTUPINDIA">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/timespro.webp') }}" alt="TIMES-PRO">
                     </div>
-    
+
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/alliance/upgrad.webp') }}" alt="UPGRAD">
                     </div>
@@ -579,7 +605,7 @@
             </div>
 
         </div>
-       
+
     </section>
     <!-- Alliance Area Start -->
 
@@ -818,7 +844,7 @@
                         <h2 class="title"><span class="builder-editable"
                                 builder-identity="5">{{ get_phrase('Learn & Grow Your Skills From ') }}</span> <span
                                 class="gradient shadow-none color builder-editable"
-                                builder-identity="52nd">{{ get_phrase('Educate') }}</span>
+                                builder-identity="52nd">{{ get_phrase('Eureka Learnings') }}</span>
                         </h2>
                         <p class="description mt-5 builder-editable" builder-identity="6">
                             {{ get_phrase('It offers courses designed to enhance knowledge and develop practical skills for personal and professional growth.') }}
