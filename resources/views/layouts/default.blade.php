@@ -53,9 +53,7 @@
     <!-- Custom Style -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/custom_style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/new_responsive.css') }}">
-    <!-- Jquery Js -->
-    <script src="{{ asset('assets/frontend/default/js/jquery-3.7.1.min.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/default/js/jquery.tagcanvas.js') }}" defer></script>
+
 
     @stack('css')
 
@@ -107,7 +105,9 @@
     <!-- Bootstrap Js -->
     <script src="{{ asset('assets/frontend/default/js/bootstrap.bundle.min.js') }}"></script>
 
-
+    <!-- Jquery Js -->
+    <script src="{{ asset('assets/frontend/default/js/jquery-3.7.1.min.js') }}" defer></script>
+    <script src="{{ asset('assets/frontend/default/js/jquery.tagcanvas.js') }}" defer></script>
     <!-- nice select js -->
     <script src="{{ asset('assets/frontend/default/js/jquery.nice-select.min.js') }}"></script>
 
