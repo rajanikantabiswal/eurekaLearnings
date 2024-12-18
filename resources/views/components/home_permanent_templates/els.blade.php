@@ -411,6 +411,11 @@
         .user-image img {
             object-fit: contain !important;
         }
+        @media (max-width: 768px){
+            #tech-globe{
+                display: none;
+            }
+        }
 
         /* End main header */
     </style>
@@ -724,8 +729,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
-
-                    {{-- <div id="myCanvasContainer">
+                    <div class="tech-globe">
+                        <div id="myCanvasContainer">
                         <canvas width="500" height="500" style="width: 100%; max-width: 70vh;" id="myCanvas">
                             <div id="tags">
                                 <a title="Laravel" href="#" target="_self" rel="noopener noreferrer"
@@ -875,7 +880,9 @@
 
                             </div>
                         </canvas>
-                    </div> --}}
+                    </div>
+                        </div>
+                    
 
 
                 </div>
