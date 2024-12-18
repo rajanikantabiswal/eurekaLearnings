@@ -313,7 +313,29 @@
 
 
         .marquee {
+            position: relative;
             overflow: hidden;
+        }
+
+        .marquee::before,
+        .marquee::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .marquee::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        .marquee::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
         }
 
         .marquee-content {
@@ -322,19 +344,23 @@
             animation: scrolling 40s linear infinite;
         }
 
+        .marquee-content2 {
+            display: flex;
+            align-items: center;
+            animation: scrolling2 40s linear infinite;
+            margin: 50px 0;
+        }
+
         .marquee-item {
             flex: 0 0 10vw;
             margin: 0 2vw;
-            /*   flex: 0 0 20vw; */
-            /*   margin: 0 2vw; */
         }
 
 
         .marquee-item img {
-            display: block;
-            width: 100%;
-            /*   padding: 0 20px; */
+            height: 50px;
         }
+        
 
         @keyframes scrolling {
             0% {
@@ -342,7 +368,17 @@
             }
 
             100% {
-                transform: translatex(-144vw);
+                transform: translatex(-150%);
+            }
+        }
+
+        @keyframes scrolling2 {
+            0% {
+                transform: translateX(-150%);
+            }
+
+            100% {
+                transform: translatex(0);
             }
         }
 
@@ -370,7 +406,8 @@
         .alliance h1 {
             width: 60%;
         }
-        .user-image img{
+
+        .user-image img {
             object-fit: contain !important;
         }
 
@@ -1090,6 +1127,185 @@
     </section>
     <!-- FAQ Area End -->
 
+    <!-- Client Area Start -->
+    <section class="section-padding">
+        <div class="row container align-items-center">
+            <div class="col-sm-5 text-center text-black p-5">
+                <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">
+                    Our Valuable Clients</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repudiandae unde pariatur voluptas eum
+                    molestiae corporis blanditiis molestias dolor! Eum ullam, cum suscipit deserunt eius voluptates quis
+                    molestias animi consectetur vero perspiciatis praesentium officiis dolorem eligendi corrupti ut,
+                    laudantium libero?</p>
+            </div>
+            <div class="col-sm-7 marquee">
+                <div class="marquee-content">
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/esspl.webp') }}" alt="esspl">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/digit.webp') }}" alt="digit">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cvraman.webp') }}"
+                            alt="cvraman">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/csm.webp') }}" alt="csm">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cp.webp') }}" alt="cp">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cozentus.webp') }}"
+                            alt="cozentus">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/adityabirla.webp') }}" alt="adityabirla">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/esspl.webp') }}" alt="esspl">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/digit.webp') }}" alt="digit">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cvraman.webp') }}"
+                            alt="cvraman">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/csm.webp') }}" alt="csm">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cp.webp') }}" alt="cp">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cozentus.webp') }}"
+                            alt="cozentus">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/adityabirla.webp') }}" alt="adityabirla">
+                    </div>
+                </div>
+
+                <div class="marquee-content2">
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients.vedanta.webp') }}" alt="vedanta">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/tcs.webp') }}" alt="tcs">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/tata.webp') }}" alt="tata">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/processmap.webp') }}" alt="processmap">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/printlink.webp') }}" alt="printlink">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/polycab.webp') }}"
+                            alt="polycab">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/vedanta.webp') }}" alt="vedanta">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/tcs.webp') }}" alt="tcs">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/tata.webp') }}" alt="tata">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/processmap.webp') }}" alt="processmap">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/printlink.webp') }}" alt="printlink">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/polycab.webp') }}"
+                            alt="polycab">
+                    </div>
+                </div>
+
+                <div class="marquee-content">
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/ntm.webp') }}" alt="ntm">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/mindfire.webp') }}" alt="mindfire">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/livedigital.webp') }}"
+                            alt="livedigital">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/incometax.webp') }}" alt="incometax">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/in2it.webp') }}" alt="in2it">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/gemini.webp') }}" alt="gemini">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/ntm.webp') }}" alt="ntm">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/mindfire.webp') }}" alt="mindfire">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/livedigital.webp') }}"
+                            alt="livedigital">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/incometax.webp') }}" alt="incometax">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/in2it.webp') }}" alt="in2it">
+                    </div>
+
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/clients/gemini.webp') }}" alt="gemini">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Client Area Start -->
+
     <!-- Testimonial Area Start -->
     <section class="testimonials-wrapper section-padding px-20">
         <span class="elips left-elips"><img class="builder-editable" builder-identity="1"
@@ -1112,7 +1328,7 @@
                 <div class="col-lg-3">
                     <div class="user-image">
                         <img class="builder-editable" builder-identity="6"
-                            src="{{asset('assets/frontend/default/images/client-testimonial.webp')}}" alt="">
+                            src="{{ asset('assets/frontend/default/images/client-testimonial.webp') }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-8">
@@ -1140,7 +1356,7 @@
                             @foreach ($reviews as $review)
                                 <!-- Single User Opinion -->
                                 <div class="single-opinion">
-                                    
+
                                     <div class="testimonial-border">
                                         <div class="testimonial-des">
                                             <p class="description overlay-content overlay-content-max-h-150">
@@ -1172,7 +1388,6 @@
                                     </div>
 
                                 </div>
-                               
                             @endforeach
                         @endif
                     </div>
