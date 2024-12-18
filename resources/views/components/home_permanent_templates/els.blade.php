@@ -304,92 +304,46 @@
             content: '';
         }
 
-        .marquee-box {
-            --space: 2rem;
 
-            display: grid;
-            align-content: center;
-            overflow: hidden;
-            gap: var(--space);
-            width: 100%;
-            font-family: "Corben", system-ui, sans-serif;
-            font-size: 1.5rem;
-            line-height: 1.5;
-        }
 
         .marquee {
-            --duration: 10s;
-            --gap: var(--space);
-
-            display: flex;
-            overflow: hidden;
-            user-select: none;
-            gap: var(--gap);
-
+              overflow: hidden;
         }
 
-        .marquee__group {
-            flex-shrink: 0;
+        .marquee-content {
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            gap: var(--gap);
-            min-width: 100%;
-            animation: scroll var(--duration) linear infinite;
+            animation: scrolling 40s linear infinite;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .marquee__group {
-                animation-play-state: paused;
-            }
+        .marquee-item {
+            flex: 0 0 10vw;
+            margin: 0 2vw;
+            /*   flex: 0 0 20vw; */
+            /*   margin: 0 2vw; */
         }
 
-        .marquee__group img {
-            /* max-width: clamp(10rem, 1rem + 28vmin, 20rem);
-                                                        aspect-ratio: 1; */
-            object-fit: content;
-            border-radius: 1rem;
-            width: 160px;
+        .marquee-item img {
+            display: block;
+            width: 100%;
+            /*   padding: 0 20px; */
         }
 
-        /* .marquee__group p {
-                                                        background-image: linear-gradient(75deg,
-                                                                hsl(240deg 70% 49%) 0%,
-                                                                hsl(253deg 70% 49%) 11%,
-                                                                hsl(267deg 70% 49%) 22%,
-                                                                hsl(280deg 71% 48%) 33%,
-                                                                hsl(293deg 71% 48%) 44%,
-                                                                hsl(307deg 71% 48%) 56%,
-                                                                hsl(320deg 71% 48%) 67%,
-                                                                hsl(333deg 72% 48%) 78%,
-                                                                hsl(347deg 72% 48%) 89%,
-                                                                hsl(0deg 73% 47%) 100%);
-                                                        -webkit-background-clip: text;
-                                                        -webkit-text-fill-color: transparent;
-                                                    } */
-
-        .marquee--borders {
-            border-block: 3px solid #ec2426;
-            padding-block: 0.75rem;
-        }
-
-        .marquee--reverse .marquee__group {
-            animation-delay: calc(var(--duration) / -2);
-            animation-direction: reverse;
-        }
-
-        @keyframes scroll {
+        @keyframes scrolling {
             0% {
                 transform: translateX(0);
             }
 
             100% {
-                transform: translateX(calc(-100% - var(--gap)));
+                transform: translatex(-144vw);
             }
         }
 
+
         section.alliance h1 {
-            font-size: 22px !important;
+            font-size: 18px !important;
+            font-weight: 800 !important;
+            color: rgb(72, 72, 72);
         }
 
         /* End main header */
@@ -541,87 +495,95 @@
 
     <!-- Alliance Area Start -->
     <section class="py-4 alliance">
-        <div class="">
-            <h1 class="title-5 fs-32px lh-42px fw-500 mb-20px text-center">
-                Associates and Strategic Alliance</h1>
-        </div>
-        <div class="marquee-box">
-            <div class="marquee">
-                <div class="marquee__group">
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png' alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png' alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png' alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
-                        alt=''>
-                </div>
-
-                <div aria-hidden="true" class="marquee__group">
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png' alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png' alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png' alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
-                        alt=''>
+        <div class="row">
+            <div class="col-sm-3 d-flex align-items-center justify-content-center text-center text-black">
+                <h1>ASSOCIATES <br>&<br> STRATEGIC ALLIANCES
+                </h1>
+            </div>
+            <div class="col-sm-9 marquee">
+                <div class="marquee-content">
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/eccouncil.webp') }}" alt="EC-Council">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/gem.webp') }}" alt="GEM">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/mit.webp') }}" alt="MIT">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/nasscom.webp') }}" alt="NASSCOM">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/niit.webp') }}" alt="NIIT">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/sanako.webp') }}" alt="SANAKO">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/startupindia.webp') }}"
+                            alt="STARTUPINDIA">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/timespro.webp') }}" alt="TIMES-PRO">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/upgrad.webp') }}" alt="UPGRAD">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/eccouncil.webp') }}" alt="EC-Council">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/gem.webp') }}" alt="GEM">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/mit.webp') }}" alt="MIT">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/nasscom.webp') }}" alt="NASSCOM">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/niit.webp') }}" alt="NIIT">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/sanako.webp') }}" alt="SANAKO">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/startupindia.webp') }}"
+                            alt="STARTUPINDIA">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/timespro.webp') }}" alt="TIMES-PRO">
+                    </div>
+    
+                    <div class="marquee-item">
+                        <img src="{{ asset('assets/frontend/default/images/alliance/upgrad.webp') }}" alt="UPGRAD">
+                    </div>
                 </div>
             </div>
 
-            {{-- <div class="marquee marquee--borders" style="--duration: 100s">
-                <div class="marquee__group">
-                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
-                    <p class="gradient color shadow-none" aria-hidden="true">ASSOCIATES & STRATEGIC ALLIANCES</p>
-                    <p class="gradient color shadow-none" aria-hidden="true">ASSOCIATES & STRATEGIC ALLIANCES</p>
-                </div>
-
-                <div aria-hidden="true" class="marquee__group">
-                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
-                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
-                    <p class="gradient color shadow-none">ASSOCIATES & STRATEGIC ALLIANCES</p>
-                </div>
-            </div> --}}
-
-            {{-- <div class="marquee marquee--reverse">
-                <div class="marquee__group">
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
-                        alt=''>
-                </div>
-
-                <div aria-hidden="true" class="marquee__group">
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture8-1-e1700473146554.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture11-1-e1700473181203.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture19-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture21-1.png'
-                        alt=''>
-                    <img src='https://eurekalearnings.in/wp-content/uploads/2023/10/Picture12-1.png'
-                        alt=''>
-                </div>
-            </div> --}}
         </div>
+       
     </section>
     <!-- Alliance Area Start -->
 
-
+    <!-- EC-Council Area Start -->
     <section class="section-padding ec-council ">
         <div class="container">
             <div class="row align-items-center">
@@ -638,6 +600,7 @@
             </div>
         </div>
     </section>
+    <!-- EC-Council Area End -->
 
     <!-- Category Area Start -->
     <section class="section-padding">
@@ -1073,8 +1036,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center">
-                        <span class="title-head builder-editable" builder-identity="1">{{get_phrase('Categories')}}</span>
-                        <h2 class="title builder-editable" builder-identity="2">{{get_phrase('Explore Top Courses Caterories')}}</h2>
+                        <span class="title-head builder-editable"
+                            builder-identity="1">{{ get_phrase('Categories') }}</span>
+                        <h2 class="title builder-editable" builder-identity="2">
+                            {{ get_phrase('Explore Top Courses Caterories') }}</h2>
                     </div>
                 </div>
             </div>
@@ -1087,7 +1052,7 @@
                             </div>
                             <div class="single-category-name">
                                 <h4>{{ $category->title }}</h4>
-                                <p>{{ count_category_courses($category->id) }} {{get_phrase('courses')}}</p>
+                                <p>{{ count_category_courses($category->id) }} {{ get_phrase('courses') }}</p>
                             </div>
                         </a>
                     </div>
@@ -1271,7 +1236,7 @@
     </script>
     <!-- Testimonial Area End -->
 
-   
+
 
 
     <!-- Blog Area Start -->
@@ -1281,7 +1246,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title-1 mb-50px">
-                            <h1 class="title-3 mb-26px fs-40px lh-52px fw-medium text-center">{{ get_phrase('Our Blog') }}
+                            <h1 class="title-3 mb-26px fs-40px lh-52px fw-medium text-center">
+                                {{ get_phrase('Our Blog') }}
                             </h1>
                             <p class="subtitle-2 fs-15px lh-24px text-center">
                                 {{ get_phrase('Awesome  site. on the top advertising a business online includes assembling Having the most keep.') }}
@@ -1332,7 +1298,7 @@
                     initial: [0.8, -0.3],
                     pinchZoom: false,
                     wheelZoom: false,
-                    dragControl: true,
+                    dragControl: false,
                     decel: 0.95,
                     noSelect: true
                 });
