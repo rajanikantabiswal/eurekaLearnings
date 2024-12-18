@@ -361,7 +361,7 @@
         .marquee-item img {
             height: 50px;
         }
-        
+
 
         @keyframes scrolling {
             0% {
@@ -410,11 +410,6 @@
 
         .user-image img {
             object-fit: contain !important;
-        }
-        @media (max-width: 768px){
-            .tech-globe{
-                display: none;
-            }
         }
 
         /* End main header */
@@ -729,8 +724,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
-                    <div class="tech-globe">
-                        <div id="myCanvasContainer">
+                    {{-- <div id="myCanvasContainer">
                         <canvas width="500" height="500" style="width: 100%; max-width: 70vh;" id="myCanvas">
                             <div id="tags">
                                 <a title="Laravel" href="#" target="_self" rel="noopener noreferrer"
@@ -880,11 +874,7 @@
 
                             </div>
                         </canvas>
-                    </div>
-                        </div>
-                    
-
-
+                    </div> --}}
                 </div>
                 <div class="col-lg-7 col-md-6">
                     <div class="skil-content">
@@ -1157,8 +1147,7 @@
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/cvraman.webp') }}"
-                            alt="cvraman">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cvraman.webp') }}" alt="cvraman">
                     </div>
 
                     <div class="marquee-item">
@@ -1169,12 +1158,12 @@
                         <img src="{{ asset('assets/frontend/default/images/clients/cp.webp') }}" alt="cp">
                     </div>
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/cozentus.webp') }}"
-                            alt="cozentus">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cozentus.webp') }}" alt="cozentus">
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/adityabirla.webp') }}" alt="adityabirla">
+                        <img src="{{ asset('assets/frontend/default/images/clients/adityabirla.webp') }}"
+                            alt="adityabirla">
                     </div>
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/clients/esspl.webp') }}" alt="esspl">
@@ -1185,8 +1174,7 @@
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/cvraman.webp') }}"
-                            alt="cvraman">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cvraman.webp') }}" alt="cvraman">
                     </div>
 
                     <div class="marquee-item">
@@ -1197,12 +1185,12 @@
                         <img src="{{ asset('assets/frontend/default/images/clients/cp.webp') }}" alt="cp">
                     </div>
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/cozentus.webp') }}"
-                            alt="cozentus">
+                        <img src="{{ asset('assets/frontend/default/images/clients/cozentus.webp') }}" alt="cozentus">
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/adityabirla.webp') }}" alt="adityabirla">
+                        <img src="{{ asset('assets/frontend/default/images/clients/adityabirla.webp') }}"
+                            alt="adityabirla">
                     </div>
                 </div>
 
@@ -1220,7 +1208,8 @@
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/processmap.webp') }}" alt="processmap">
+                        <img src="{{ asset('assets/frontend/default/images/clients/processmap.webp') }}"
+                            alt="processmap">
                     </div>
 
                     <div class="marquee-item">
@@ -1228,8 +1217,7 @@
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/polycab.webp') }}"
-                            alt="polycab">
+                        <img src="{{ asset('assets/frontend/default/images/clients/polycab.webp') }}" alt="polycab">
                     </div>
                     <div class="marquee-item">
                         <img src="{{ asset('assets/frontend/default/images/clients/vedanta.webp') }}" alt="vedanta">
@@ -1244,7 +1232,8 @@
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/processmap.webp') }}" alt="processmap">
+                        <img src="{{ asset('assets/frontend/default/images/clients/processmap.webp') }}"
+                            alt="processmap">
                     </div>
 
                     <div class="marquee-item">
@@ -1252,8 +1241,7 @@
                     </div>
 
                     <div class="marquee-item">
-                        <img src="{{ asset('assets/frontend/default/images/clients/polycab.webp') }}"
-                            alt="polycab">
+                        <img src="{{ asset('assets/frontend/default/images/clients/polycab.webp') }}" alt="polycab">
                     </div>
                 </div>
 
