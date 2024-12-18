@@ -412,7 +412,7 @@
             object-fit: contain !important;
         }
 
-        @media (max-width;768px){
+        @media (max-width: 768px){
             #myCanvasContainer{
                 display: none;
             }
