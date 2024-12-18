@@ -720,7 +720,7 @@
     <!-- Category Area End -->
 
     <!-- About Area Start -->
-    {{-- <section class="testimonials-wrapper section-padding">
+    <section class="testimonials-wrapper section-padding">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -934,7 +934,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- About Area End -->
 
     <!-- Online Course Area Start -->
