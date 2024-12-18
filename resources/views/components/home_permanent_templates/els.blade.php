@@ -412,12 +412,6 @@
             object-fit: contain !important;
         }
 
-        @media (max-width: 768px){
-            #myCanvasContainer{
-                display: none;
-            }
-        }
-
         /* End main header */
     </style>
 @endpush
@@ -731,7 +725,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
 
-                    <div id="myCanvasContainer">
+                    {{-- <div id="myCanvasContainer">
                         <canvas width="500" height="500" style="width: 100%; max-width: 70vh;" id="myCanvas">
                             <div id="tags">
                                 <a title="Laravel" href="#" target="_self" rel="noopener noreferrer"
@@ -881,7 +875,7 @@
 
                             </div>
                         </canvas>
-                    </div>
+                    </div> --}}
 
 
                 </div>
