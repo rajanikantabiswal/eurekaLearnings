@@ -354,6 +354,7 @@
         .marquee-item {
             flex: 0 0 10vw;
             margin: 0 2vw;
+            justify-content: center;
         }
 
 
