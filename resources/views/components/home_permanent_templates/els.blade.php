@@ -412,7 +412,7 @@
             object-fit: contain !important;
         }
         @media (max-width: 768px){
-            #tech-globe{
+            .tech-globe{
                 display: none;
             }
         }
