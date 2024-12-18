@@ -443,6 +443,10 @@
                                     class="btn btn-toggle-list d-inline-flex align-items-center text-16px fw-500 w-100 rounded border-0 py-3">{{ get_phrase('Bootcamp') }}</a>
                             </li>
                             {{-- <li><a href="{{ route('team.packages') }}" class="btn btn-toggle-list d-inline-flex align-items-center text-16px fw-500 w-100 rounded border-0 py-3">{{ get_phrase('Team Training') }}</a></li> --}}
+                            <li><a href="{{ route('certifications.index') }}"
+                                class="btn btn-toggle-list d-inline-flex align-items-center text-16px fw-500 w-100 rounded border-0 py-3">{{ get_phrase('Certifications') }}</a>
+                        </li>
+                           
                         </ul>
                     </div>
                     @guest
