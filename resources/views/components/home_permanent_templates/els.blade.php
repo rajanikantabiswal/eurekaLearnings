@@ -412,6 +412,12 @@
             object-fit: contain !important;
         }
 
+        @media (max-width;768px){
+            #myCanvasContainer{
+                display: none;
+            }
+        }
+
         /* End main header */
     </style>
 @endpush
