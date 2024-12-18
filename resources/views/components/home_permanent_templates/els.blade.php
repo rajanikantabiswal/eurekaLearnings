@@ -370,15 +370,9 @@
         .alliance h1 {
             width: 60%;
         }
-/* 
-        .testimonials-wrapper .owl-theme .owl-nav {
-            margin-top: 0px !important;
-            position: absolute;
-            left: 0px !important;
-            bottom: 0 !important;
-            z-index: 999;
-        } */
-
+        .user-image img{
+            object-fit: contain !important;
+        }
 
         /* End main header */
     </style>
@@ -1118,7 +1112,7 @@
                 <div class="col-lg-3">
                     <div class="user-image">
                         <img class="builder-editable" builder-identity="6"
-                            src="{{ asset('assets/page-builder/block-image/test-image.png') }}" alt="">
+                            src="{{asset('assets/frontend/default/images/client-testimonial.webp')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-8">
