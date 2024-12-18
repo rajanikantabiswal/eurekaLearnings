@@ -894,17 +894,17 @@
       }
     }
     function Scroll(e) {
-      // var i, t = TagCanvas;
-      // clearTimeout(t.scrollTimer);
-      // for(i in t.tc) {
-      //   t.tc[i].Pause();
-      // }
-      // t.scrollTimer = setTimeout(function() {
-      //   var i, t = TagCanvas;
-      //   for(i in t.tc) {
-      //     t.tc[i].Resume();
-      //   }
-      // }, t.scrollPause);
+      var i, t = TagCanvas;
+      clearTimeout(t.scrollTimer);
+      for(i in t.tc) {
+        t.tc[i].Pause();
+      }
+      t.scrollTimer = setTimeout(function() {
+        var i, t = TagCanvas;
+        for(i in t.tc) {
+          t.tc[i].Resume();
+        }
+      }, t.scrollPause);
     }
     function DrawCanvas() {
       DrawCanvasRAF(TimeNow());
