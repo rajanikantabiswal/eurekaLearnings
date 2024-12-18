@@ -201,8 +201,9 @@
             background-position: center;
             border-bottom: 1px solid #EC2426;
         }
-        @media (max-width: 768px){
-            section.ec-council{
+
+        @media (max-width: 768px) {
+            section.ec-council {
                 background: none;
             }
         }
@@ -365,9 +366,18 @@
                 margin-bottom: 5px;
             }
         }
-        .alliance h1{
+
+        .alliance h1 {
             width: 60%;
         }
+/* 
+        .testimonials-wrapper .owl-theme .owl-nav {
+            margin-top: 0px !important;
+            position: absolute;
+            left: 0px !important;
+            bottom: 0 !important;
+            z-index: 999;
+        } */
 
 
         /* End main header */
@@ -1093,7 +1103,7 @@
         <span class="elips right-elips"><img class="builder-editable" builder-identity="2"
                 src="{{ asset('assets/page-builder/block-image/Ellipse 9.png') }}" alt="..."></span>
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-4 col-md-4">
                     <div class="section-title ">
                         <span class="title-head builder-editable"
@@ -1105,7 +1115,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-3">
+                    <div class="user-image">
+                        <img class="builder-editable" builder-identity="6"
+                            src="{{ asset('assets/page-builder/block-image/test-image.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-8">
                     <div class="user-slider owl-carousel owl-theme">
                         @php
                             $reviews = DB::table('user_reviews')->get();
@@ -1114,11 +1130,7 @@
                         @if ($reviews->isEmpty())
                             <!-- Your code for empty reviews -->
                             <div class="single-opinion">
-                                <div class="user-image">
-                                    <img class="builder-editable" builder-identity="6"
-                                        src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
-                                        alt="">
-                                </div>
+
                                 <div class="testimonial-border">
                                     <div class="testimonial-des">
                                         <div class="user-info d-flex">
@@ -1134,11 +1146,7 @@
                             @foreach ($reviews as $review)
                                 <!-- Single User Opinion -->
                                 <div class="single-opinion">
-                                    <div class="user-image">
-                                        <img class="builder-editable" builder-identity="6"
-                                            src="{{ asset('assets/page-builder/block-image/test-image.png') }}"
-                                            alt="">
-                                    </div>
+                                    
                                     <div class="testimonial-border">
                                         <div class="testimonial-des">
                                             <p class="description overlay-content overlay-content-max-h-150">
@@ -1168,7 +1176,9 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
+                               
                             @endforeach
                         @endif
                     </div>
