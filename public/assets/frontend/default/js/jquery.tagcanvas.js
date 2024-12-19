@@ -819,70 +819,70 @@
       }
     }
     function TouchDown(e) {
-      var tg = EventToCanvasId(e), tc = (tg && TagCanvas.tc[tg]), p;
-      if(tc && e.changedTouches) {
-        if(e.touches.length == 1 && tc.touchState == 0) {
-          tc.touchState = 1;
-          tc.BeginDrag(e);
-          if(p = EventXY(e, tc.canvas)) {
-            tc.mx = p.x;
-            tc.my = p.y;
-            tc.drawn = 0;
-          }
-        } else if(e.targetTouches.length == 2 && tc.pinchZoom) {
-          tc.touchState = 3;
-          tc.EndDrag();
-          tc.BeginPinch(e);
-        } else {
-          tc.EndDrag();
-          tc.EndPinch();
-          tc.touchState = 0;
-        }
-      }
+      // var tg = EventToCanvasId(e), tc = (tg && TagCanvas.tc[tg]), p;
+      // if(tc && e.changedTouches) {
+      //   if(e.touches.length == 1 && tc.touchState == 0) {
+      //     tc.touchState = 1;
+      //     tc.BeginDrag(e);
+      //     if(p = EventXY(e, tc.canvas)) {
+      //       tc.mx = p.x;
+      //       tc.my = p.y;
+      //       tc.drawn = 0;
+      //     }
+      //   } else if(e.targetTouches.length == 2 && tc.pinchZoom) {
+      //     tc.touchState = 3;
+      //     tc.EndDrag();
+      //     tc.BeginPinch(e);
+      //   } else {
+      //     tc.EndDrag();
+      //     tc.EndPinch();
+      //     tc.touchState = 0;
+      //   }
+      // }
     }
     function TouchUp(e) {
-      var tg = EventToCanvasId(e), tc = (tg && TagCanvas.tc[tg]);
-      if(tc && e.changedTouches) {
-        switch(tc.touchState) {
-        case 1:
-          tc.Draw();
-          tc.Clicked();
-          break;
-        case 2:
-          tc.EndDrag();
-          break;
-        case 3:
-          tc.EndPinch();
-        }
-        tc.touchState = 0;
-      }
+      // var tg = EventToCanvasId(e), tc = (tg && TagCanvas.tc[tg]);
+      // if(tc && e.changedTouches) {
+      //   switch(tc.touchState) {
+      //   case 1:
+      //     tc.Draw();
+      //     tc.Clicked();
+      //     break;
+      //   case 2:
+      //     tc.EndDrag();
+      //     break;
+      //   case 3:
+      //     tc.EndPinch();
+      //   }
+      //   tc.touchState = 0;
+      // }
     }
     function TouchMove(e) {
-      var i, t = TagCanvas, tc, p, tg = EventToCanvasId(e);
-      for(i in t.tc) {
-        tc = t.tc[i];
-        if(tc.tttimer) {
-          clearTimeout(tc.tttimer);
-          tc.tttimer = null;
-        }
-      }
-      tc = (tg && t.tc[tg]);
-      if(tc && e.changedTouches && tc.touchState) {
-        switch(tc.touchState) {
-        case 1:
-        case 2:
-          if(p = EventXY(e, tc.canvas)) {
-            tc.mx = p.x;
-            tc.my = p.y;
-            if(tc.Drag(e, p))
-              tc.touchState = 2;
-          }
-          break;
-        case 3:
-          tc.Pinch(e);
-        }
-        tc.drawn = 0;
-      }
+      // var i, t = TagCanvas, tc, p, tg = EventToCanvasId(e);
+      // for(i in t.tc) {
+      //   tc = t.tc[i];
+      //   if(tc.tttimer) {
+      //     clearTimeout(tc.tttimer);
+      //     tc.tttimer = null;
+      //   }
+      // }
+      // tc = (tg && t.tc[tg]);
+      // if(tc && e.changedTouches && tc.touchState) {
+      //   switch(tc.touchState) {
+      //   case 1:
+      //   case 2:
+      //     if(p = EventXY(e, tc.canvas)) {
+      //       tc.mx = p.x;
+      //       tc.my = p.y;
+      //       if(tc.Drag(e, p))
+      //         tc.touchState = 2;
+      //     }
+      //     break;
+      //   case 3:
+      //     tc.Pinch(e);
+      //   }
+      //   tc.drawn = 0;
+      // }
     }
     function MouseWheel(e) {
       var t = TagCanvas, tg = EventToCanvasId(e);
