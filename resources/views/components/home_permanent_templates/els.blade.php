@@ -724,7 +724,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
-                    {{-- <div id="myCanvasContainer">
+                    <div id="myCanvasContainer">
                         <canvas width="500" height="500" style="width: 100%; max-width: 70vh;" id="myCanvas">
                             <div id="tags">
                                 <a title="Laravel" href="#" target="_self" rel="noopener noreferrer"
@@ -874,7 +874,7 @@
 
                             </div>
                         </canvas>
-                    </div> --}}
+                    </div>
                 </div>
                 <div class="col-lg-7 col-md-6">
                     <div class="skil-content">
@@ -1324,7 +1324,7 @@
                 <div class="col-lg-3">
                     <div class="user-image">
                         <img class="builder-editable" builder-identity="6"
-                            src="{{ asset('assets/frontend/default/images/client-testimonial.webp') }}" alt="">
+                            src="{{ asset('assets/frontend/default/image/about-group.png') }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-8">
@@ -1392,27 +1392,7 @@
         </div>
     </section>
     <!-- Testimonial Area End -->
-    <script>
-        $('.testimonials-wrapper .user-slider').owlCarousel({
-            loop: false,
-            autoplay: false,
-            margin: 10,
-            nav: true,
-            navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
-            dots: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        });
-    </script>
+   
     <!-- Testimonial Area End -->
 
 
@@ -1466,6 +1446,7 @@
 @endsection
 
 @push('js')
+
     <script>
         window.onload = function() {
             try {
@@ -1498,6 +1479,28 @@
         //     $("#myCanvas").tagcanvas($options, "tags");
         // });
     </script>
+
+<script>
+    $('.testimonials-wrapper .user-slider').owlCarousel({
+        loop: false,
+        autoplay: false,
+        margin: 10,
+        nav: true,
+        navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+</script>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".categorySwiper", {
