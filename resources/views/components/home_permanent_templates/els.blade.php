@@ -950,9 +950,9 @@
             </div>
             <div class="row g-28px mb-50px">
                 @php
-                    $featured_courses = DB::table('courses')->where('status', 'active')->latest('id')->take(4)->get();
+                    $featured_courses = DB::table('courses')->where('status', 'active')->latest('id')->take(8)->get();
                 @endphp
-                @foreach ($featured_courses->take(4) as $key => $row)
+                @foreach ($featured_courses->take(8) as $key => $row)
                     @php
                         $ratings = DB::table('reviews')
                             ->where('course_id', $row->id)
@@ -960,11 +960,11 @@
                             ->toArray();
                         $average_rating = count($ratings) > 0 ? array_sum($ratings) / count($ratings) : null;
                     @endphp
-                    <div class="col-lg-6">
+                    <div class="col-lg-3">
                         <a href="{{ route('course.details', $row->slug) }}" class="d-block h-100 w-100 max-sm-350px">
                             <div class="lms-1-card">
                                 <div class="lms-1-card-body">
-                                    <div class="d-flex gap-3 align-items-center flex-sm-row flex-column">
+                                    <div class="d-flex gap-3 align-items-center flex-column">
                                         <div class="list-view-banner2">
                                             <img src="{{ get_image($row->thumbnail) }}" alt="banner">
                                         </div>
@@ -1051,7 +1051,12 @@
                     <div class="col-md-4 col-sm-6 mb-30">
                         <a href="{{ route('courses', $category->slug) }}" class="single-category">
                             <div class="single-category-logo">
-                                <img src="{{ get_image($category->category_logo) }}" alt="">
+                                {{-- @if (!isEmpty($category->category_logo))
+                                    <img src="{{ get_image($category->category_logo) }}" alt="">
+                                @else
+                                    <img src="{{ get_image($category->thumbnail) }}" alt="">
+                                @endif --}}
+                                <img src="{{ get_image(!empty($category->category_logo) ? $category->category_logo : $category->thumbnail) }}" alt="">
                             </div>
                             <div class="single-category-name">
                                 <h4>{{ $category->title }}</h4>
@@ -1392,7 +1397,7 @@
         </div>
     </section>
     <!-- Testimonial Area End -->
-   
+
     <!-- Testimonial Area End -->
 
 
@@ -1480,27 +1485,27 @@
         // });
     </script>
 
-<script>
-    $('.testimonials-wrapper .user-slider').owlCarousel({
-        loop: false,
-        autoplay: false,
-        margin: 10,
-        nav: true,
-        navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
-        dots: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
+    <script>
+        $('.testimonials-wrapper .user-slider').owlCarousel({
+            loop: false,
+            autoplay: false,
+            margin: 10,
+            nav: true,
+            navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
             }
-        }
-    });
-</script>
+        });
+    </script>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".categorySwiper", {

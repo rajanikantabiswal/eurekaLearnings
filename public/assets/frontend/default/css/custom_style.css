@@ -6252,9 +6252,9 @@ span[class*="fi-rr-"]:before {
 }
 
 .list-view-banner2 {
-    max-width: 233px;
+    /* max-width: 233px; */
     width: 100%;
-    aspect-ratio: 233 / 210;
+    /* aspect-ratio: 233 / 210; */
 }
 
 .list-view-banner2>img {
